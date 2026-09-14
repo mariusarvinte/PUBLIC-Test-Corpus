@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "ls-remote",
+    "upstream"
+  ],
+  "stdout": {
+    "pattern": "7f9e97d93d22f982facd570eafbb86ffb859f547\trefs/heads/main\n7f9e97d93d22f982facd570eafbb86ffb859f547\trefs/heads/topic\n"
+  }
+}

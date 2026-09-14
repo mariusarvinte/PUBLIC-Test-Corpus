@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+i=1
+while [ "$i" -le 500 ]; do
+  file=$(printf '%s/file_%03d.bin' "${DEFAULT_RUN_DIR}" "$i")
+  printf 'unique stress file %03d\n' "$i" > "$file"
+  truncate -s 1048576 "$file"
+  i=$((i + 1))
+done
+
+printf '%s\n' "${DEFAULT_RUN_DIR}" > "${WORKING_DIR_FILE}"

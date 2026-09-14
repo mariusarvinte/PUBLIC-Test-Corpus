@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "config",
+    "--local",
+    "--get",
+    "core.editor"
+  ],
+  "stdout": {
+    "pattern": "nano\n"
+  }
+}

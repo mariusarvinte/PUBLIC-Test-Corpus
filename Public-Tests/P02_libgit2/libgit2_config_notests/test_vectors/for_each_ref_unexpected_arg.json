@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "for-each-ref",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: extra\nusage: git2 for-each-ref\n"
+  },
+  "rc": 129
+}

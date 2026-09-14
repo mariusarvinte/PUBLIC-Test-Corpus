@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "version",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: extra\nusage: git2 version [--build-options]\n"
+  },
+  "rc": 129
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "status",
+    "--untracked-files=all",
+    "-s"
+  ],
+  "stdout": {
+    "pattern": "?? untracked/\n"
+  }
+}

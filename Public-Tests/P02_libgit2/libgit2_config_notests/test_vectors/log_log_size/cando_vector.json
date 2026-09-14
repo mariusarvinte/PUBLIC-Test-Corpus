@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "log",
+    "--log-size"
+  ],
+  "stdout": {
+    "pattern": "commit 5625b4287d311da5462c9bcee50df08ddf8fdc80\nlog size 14\nAuthor: Ava North <ava@north.dev>\nDate:   Fri Jan 12 12:00:00 2024 +0000\n\n    add note file\n\ncommit 1aa8cad2f0197b5dae8f57275f286aad7a5f1b04\nlog size 11\nAuthor: Beck Stone <beck@stone.io>\nDate:   Thu Jan 11 11:00:00 2024 +0000\n\n    add ending\n\ncommit 8b62ae08b37b537235fd370b80e08e3948ab4aa6\nlog size 11\nAuthor: Ava North <ava@north.dev>\nDate:   Wed Jan 10 10:00:00 2024 +0000\n\n    init story\n\n"
+  }
+}

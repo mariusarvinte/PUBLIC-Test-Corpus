@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "diff",
+    "--shortstat"
+  ],
+  "stdout": {
+    "pattern": " 2 files changed, 2 insertions(+), 2 deletions(-)\n"
+  }
+}

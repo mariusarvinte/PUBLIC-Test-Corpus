@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "submodule",
+    "--init",
+    "update"
+  ],
+  "stderr": {
+    "pattern": "git2: no URL configured for submodule 'testrepo'\n"
+  }
+}

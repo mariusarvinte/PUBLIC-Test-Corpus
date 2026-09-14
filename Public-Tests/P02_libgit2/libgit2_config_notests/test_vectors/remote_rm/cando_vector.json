@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "remote",
+    "rm",
+    "origin"
+  ],
+  "stdout": {
+    "pattern": "Removed remote 'origin'\n"
+  }
+}

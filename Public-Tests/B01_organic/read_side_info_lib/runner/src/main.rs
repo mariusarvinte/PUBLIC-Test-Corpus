@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 #[repr(C)]
 struct bs_t {
@@ -36,7 +36,6 @@ struct L3_gr_info_t {
 state_member! {
     struct Granule {
         sfbtab: [u8; 23],
-        //l_sfbtab: Vec<u8>,
         part_23_length: u16,
         big_values: u16,
         scalefac_compress: u16,
@@ -57,7 +56,6 @@ state_member! {
 
 harness! {
     state: {
-        //b_buf: [u8; 20],
         b_buf: Vec<u8>,
         b_pos: c_int,
         b_limit: c_int,
@@ -69,11 +67,8 @@ harness! {
     signature: unsafe extern "C" fn(*mut bs_t, *mut L3_gr_info_t, *const u8) -> c_int,
 
     fn run(&mut self) {
-        //println!("{}", size_of::<L3_gr_info_t>());
-        //self.b_buf = vec![0; 32]; // b_limit?
-        //self.l_sfbtab = vec![0; 32]; // ?
         let mut b = bs_t {
-            buf: self.b_buf.as_mut_ptr(),
+            buf: util::vec_as_mut_ptr(&mut self.b_buf),
             pos: self.b_pos,
             limit: self.b_limit
         };
@@ -84,7 +79,7 @@ harness! {
 
         for i in 0..4 {
             let n = L3_gr_info_t {
-                sfbtab: self.granule[i].sfbtab.as_mut_ptr() as *mut u8,
+                sfbtab: self.granule[i].sfbtab.as_mut_ptr(),
                 part_23_length: self.granule[i].part_23_length,
                 big_values: self.granule[i].big_values,
                 scalefac_compress: self.granule[i].scalefac_compress,
@@ -106,31 +101,11 @@ harness! {
 
         let mut l: [L3_gr_info_t; 4] = unsafe { std::mem::transmute(ul) };
 
-            /*
-        let mut l = L3_gr_info_t {
-            sfbtab: self.l_sfbtab.as_mut_ptr(),
-            part_23_length: self.l_part_23_length,
-            big_values: self.l_big_values,
-            scalefac_compress: self.l_scalefac_compress,
-            global_gain: self.l_global_gain,
-            block_type: self.l_block_type,
-            mixed_block_flag: self.l_mixed_block_flag,
-            n_long_sfb: self.l_n_long_sfb,
-            n_short_sfb: self.l_n_short_sfb,
-            table_select: self.l_table_select,
-            region_count: self.l_region_count,
-            subblock_gain: self.l_subblock_gain,
-            preflag: self.l_preflag,
-            scalefac_scale: self.l_scalefac_scale,
-            count1_table: self.l_count1_table,
-            scfsi: self.l_scfsi
-        };
-            */
         self.returns = unsafe {
             (*SYMBOL)(
                 &raw mut b as *mut bs_t,
                 &raw mut l as *mut L3_gr_info_t,
-                self.hdr.as_ptr()
+                self.hdr.as_ptr(),
             )
         };
 

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "tag",
+    "newtag"
+  ],
+  "stdout": {
+    "pattern": "Created lightweight tag 'newtag'\n"
+  }
+}

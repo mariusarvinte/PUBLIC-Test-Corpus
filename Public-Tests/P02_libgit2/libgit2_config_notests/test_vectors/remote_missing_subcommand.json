@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "remote"
+  ],
+  "stderr": {
+    "pattern": "git2: argument 'command' is required.\nusage: git2 remote <command> [--] [<args>...]\n"
+  },
+  "rc": 129
+}

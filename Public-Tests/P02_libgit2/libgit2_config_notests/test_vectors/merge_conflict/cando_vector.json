@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "merge",
+    "branch"
+  ],
+  "env": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "core.logAllRefUpdates",
+    "GIT_CONFIG_VALUE_0": "false",
+    "FAKETIME": "2024-07-04 10:11:12",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "rc": 255,
+  "stdout": {
+    "pattern": "Conflicts detected:\n"
+  },
+  "stderr": {
+    "pattern": "conflict: a:conflicting.txt o:conflicting.txt t:conflicting.txt\n"
+  }
+}

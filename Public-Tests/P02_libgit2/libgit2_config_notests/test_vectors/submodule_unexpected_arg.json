@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "submodule",
+    "--bogus"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: --bogus\nusage: git2 submodule [--init] [<subcommand>] [--] [<args>...]\n"
+  },
+  "rc": 129
+}

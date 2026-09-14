@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 type tflac_u8 = u8;
 type tflac_u16 = u16;
@@ -23,7 +23,7 @@ harness! {
     fn run(&mut self) {
         self.returns = unsafe {
             (*SYMBOL)(
-                self.d.as_ptr(),
+                util::vec_as_ptr(&self.d),
                 self.len,
                 self.crc16,
             )

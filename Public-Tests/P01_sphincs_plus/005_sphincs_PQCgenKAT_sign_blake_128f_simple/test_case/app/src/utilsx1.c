@@ -5,6 +5,7 @@
 #include "../include/forsx1.h"
 #include "../include/thash.h"
 #include "../include/utils.h"
+#include "../include/fors.h"
 #include "../include/utilsx1.h"
 
 /*
@@ -101,7 +102,7 @@ void fors_treehashx1(unsigned char *root, unsigned char *auth_path,
 		     uint32_t leaf_idx, uint32_t idx_offset,
 		     uint32_t tree_height,
 		     uint32_t tree_addr[8],
-		     leaf_info_x1 *info)
+		     fors_gen_leaf_info *info)
 {
     /* This is where we keep the intermediate nodes */
     SPX_VLA(uint8_t, stack, tree_height*SPX_N);
@@ -113,7 +114,6 @@ void fors_treehashx1(unsigned char *root, unsigned char *auth_path,
             /* index[SPX_N].  We do this to minimize the number of copies */
             /* needed during a thash */
 
-	// IAN TODO: WARNING ON INFO PARAMETER
         fors_gen_leafx1( &current[SPX_N], ctx, idx + idx_offset,
 			 info );
 

@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' 'line1' 'line2' > "${DEFAULT_RUN_DIR}/repo/file.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add file.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Grace' \
+GIT_AUTHOR_EMAIL='grace@example.com' \
+GIT_COMMITTER_NAME='Grace' \
+GIT_COMMITTER_EMAIL='grace@example.com' \
+GIT_AUTHOR_DATE='2024-04-01T00:00:00Z' \
+GIT_COMMITTER_DATE='2024-04-01T00:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m init --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'line1' 'line2-changed' > "${DEFAULT_RUN_DIR}/repo/file.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add file.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Heidi' \
+GIT_AUTHOR_EMAIL='heidi@example.com' \
+GIT_COMMITTER_NAME='Heidi' \
+GIT_COMMITTER_EMAIL='heidi@example.com' \
+GIT_AUTHOR_DATE='2024-04-02T00:00:00Z' \
+GIT_COMMITTER_DATE='2024-04-02T00:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m change --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

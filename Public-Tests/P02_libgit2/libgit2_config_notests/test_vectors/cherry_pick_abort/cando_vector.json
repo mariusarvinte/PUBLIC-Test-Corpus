@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "cherry-pick",
+    "--abort"
+  ],
+  "env": {
+    "FAKETIME": "2024-02-14 09:30:45",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Cherry-pick aborted\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "describe",
+    "--all"
+  ],
+  "stdout": {
+    "pattern": "heads/main\n"
+  }
+}

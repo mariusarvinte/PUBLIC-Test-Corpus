@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "describe"
+  ],
+  "stdout": {
+    "pattern": "v1.0.0\n"
+  }
+}

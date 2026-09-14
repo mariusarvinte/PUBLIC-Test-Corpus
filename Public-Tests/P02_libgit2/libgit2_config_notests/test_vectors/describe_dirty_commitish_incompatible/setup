@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' 'base' > "${DEFAULT_RUN_DIR}/repo/note.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add note.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Eli Snow' \
+GIT_AUTHOR_EMAIL='eli@snow.app' \
+GIT_COMMITTER_NAME='Eli Snow' \
+GIT_COMMITTER_EMAIL='eli@snow.app' \
+GIT_AUTHOR_DATE='2025-05-06T07:08:09Z' \
+GIT_COMMITTER_DATE='2025-05-06T07:08:09Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m base --no-gpg-sign >/dev/null 2>&1
+
+GIT_COMMITTER_NAME='Eli Snow' \
+GIT_COMMITTER_EMAIL='eli@snow.app' \
+GIT_COMMITTER_DATE='2025-05-06T07:09:10Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" tag -a release-5 -m release-5 >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

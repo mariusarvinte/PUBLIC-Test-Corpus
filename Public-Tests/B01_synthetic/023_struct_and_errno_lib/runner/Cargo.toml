@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_023_struct_and_errno_lib_runner"
+name = "_023_struct_and_errno_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "blame",
+    "-p",
+    "--line-porcelain",
+    "file.txt"
+  ],
+  "stdout": {
+    "pattern": "d61ed0d89f373daa5530a2cdd576e9c2643cdf4b 1 1 1\nauthor Grace\nauthor-mail <grace@example.com>\nauthor-time 1711929600\nauthor-tz +0000\ncommitter Grace\ncommitter-mail <grace@example.com>\ncommitter-time 1711929600\ncommitter-tz +0000\nsummary init\nfilename file.txt\n\tline1\n4276667eb105736d24a02449b1a9e429976c9046 2 2 1\nauthor Heidi\nauthor-mail <heidi@example.com>\nauthor-time 1712016000\nauthor-tz +0000\ncommitter Heidi\ncommitter-mail <heidi@example.com>\ncommitter-time 1712016000\ncommitter-tz +0000\nsummary change\nfilename file.txt\n\tline2-changed\n"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "fetch",
+    "/tmp/runtime/remote"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Path Remote",
+    "GIT_AUTHOR_EMAIL": "pathremote@example.test",
+    "GIT_COMMITTER_NAME": "Path Local",
+    "GIT_COMMITTER_EMAIL": "pathlocal@example.test",
+    "TZ": "UTC",
+    "FAKETIME": "2024-06-03 07:08:09",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "(?s)^Fetching /tmp/runtime/remote\r?\n.*$",
+    "is_regex": true
+  }
+}

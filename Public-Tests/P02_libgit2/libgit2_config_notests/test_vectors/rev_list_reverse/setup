@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' 'line1' > "${DEFAULT_RUN_DIR}/repo/story.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add story.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Ava North' \
+GIT_AUTHOR_EMAIL='ava@north.dev' \
+GIT_COMMITTER_NAME='Ava North' \
+GIT_COMMITTER_EMAIL='ava@north.dev' \
+GIT_AUTHOR_DATE='2024-01-10T10:00:00Z' \
+GIT_COMMITTER_DATE='2024-01-10T10:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m 'init story' --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'line1' 'line2' > "${DEFAULT_RUN_DIR}/repo/story.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add story.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Beck Stone' \
+GIT_AUTHOR_EMAIL='beck@stone.io' \
+GIT_COMMITTER_NAME='Beck Stone' \
+GIT_COMMITTER_EMAIL='beck@stone.io' \
+GIT_AUTHOR_DATE='2024-01-11T11:00:00Z' \
+GIT_COMMITTER_DATE='2024-01-11T11:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m 'add ending' --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'note' > "${DEFAULT_RUN_DIR}/repo/notes.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add notes.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Ava North' \
+GIT_AUTHOR_EMAIL='ava@north.dev' \
+GIT_COMMITTER_NAME='Ava North' \
+GIT_COMMITTER_EMAIL='ava@north.dev' \
+GIT_AUTHOR_DATE='2024-01-12T12:00:00Z' \
+GIT_COMMITTER_DATE='2024-01-12T12:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m 'add note file' --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

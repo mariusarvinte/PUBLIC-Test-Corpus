@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+
+printf '%s\n' 'seed' > "${DEFAULT_RUN_DIR}/repo/f.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add f.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Uma Crest' \
+GIT_AUTHOR_EMAIL='uma.crest@summit.net' \
+GIT_COMMITTER_NAME='Uma Crest' \
+GIT_COMMITTER_EMAIL='uma.crest@summit.net' \
+GIT_AUTHOR_DATE='2021-06-01T07:00:00Z' \
+GIT_COMMITTER_DATE='2021-06-01T07:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m seed --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

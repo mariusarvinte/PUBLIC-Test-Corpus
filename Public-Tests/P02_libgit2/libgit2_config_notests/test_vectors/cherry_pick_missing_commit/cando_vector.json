@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "cherry-pick"
+  ],
+  "stderr": {
+    "pattern": "git2: a commit to cherry-pick is required\n"
+  },
+  "rc": 129
+}

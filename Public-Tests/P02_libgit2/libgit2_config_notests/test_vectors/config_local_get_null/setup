@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+git -C "${DEFAULT_RUN_DIR}/repo" config --local user.name Ada >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

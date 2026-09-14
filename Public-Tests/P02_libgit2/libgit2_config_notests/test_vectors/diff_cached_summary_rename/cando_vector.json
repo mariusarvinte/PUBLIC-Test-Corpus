@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "--cached",
+    "--summary"
+  ],
+  "stdout": {
+    "pattern": " delete mode 100644 original.txt\n create mode 100644 renamed.txt\n"
+  }
+}

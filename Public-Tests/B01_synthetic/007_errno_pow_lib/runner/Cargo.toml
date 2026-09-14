@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_007_errno_pow_lib_runner"
+name = "_007_errno_pow_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

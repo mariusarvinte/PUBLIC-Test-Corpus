@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "worktree",
+    "lock"
+  ],
+  "stderr": {
+    "pattern": "git2: lock requires <name> [reason]\n"
+  },
+  "rc": 129
+}

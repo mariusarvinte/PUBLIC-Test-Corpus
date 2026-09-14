@@ -1,0 +1,21 @@
+{
+  "lib_state_in": {
+    "operation": "write",
+    "file_name": "test_output.txt",
+    "file_content": "Hello World",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "lib_state_out": {
+    "operation": "write",
+    "file_name": "test_output.txt",
+    "file_content": "Hello World",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "stdout": {
+    "pattern": "File written successfully\n"
+  }
+}

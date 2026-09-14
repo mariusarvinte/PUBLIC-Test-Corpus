@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "push",
+    "extra",
+    "another",
+    "third"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: third\nusage: git2 push [<repository>] [<branch>]\n"
+  },
+  "rc": 129
+}

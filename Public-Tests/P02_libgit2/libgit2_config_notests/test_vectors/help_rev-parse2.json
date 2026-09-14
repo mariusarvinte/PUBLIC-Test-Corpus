@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rev-parse",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 rev-parse [--not] [--] <revspec>...\n\nParse revision specifications.\n\nParse revision (or range) specifications and display the\nresulting object IDs.\n\nOptions:\n    <revspec>...\n        the revision specification\n    --not\n        toggle the ^ prefix on output\n"
+  }
+}

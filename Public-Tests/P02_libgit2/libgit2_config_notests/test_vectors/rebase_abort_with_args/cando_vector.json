@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "rebase",
+    "--abort",
+    "gravy"
+  ],
+  "stderr": {
+    "pattern": "git2: --abort does not accept branch arguments\n"
+  },
+  "rc": 129
+}

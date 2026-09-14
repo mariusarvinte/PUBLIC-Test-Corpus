@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "cat-file",
+    "blob",
+    "HEAD:file.txt"
+  ],
+  "stdout": {
+    "pattern": "hello\n"
+  }
+}

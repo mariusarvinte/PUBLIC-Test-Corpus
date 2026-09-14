@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 type mp3d_sample_t = i16;
 
@@ -20,7 +20,7 @@ harness! {
         self.pcm = vec![0; (self.nch as usize) * 16 + 1];
         unsafe {
             (*SYMBOL)(
-                self.pcm.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.pcm),
                 self.nch,
                 self.z.as_ptr() as *const c_float
             )

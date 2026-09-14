@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "remote",
+    "set-url",
+    "--",
+    "--push",
+    "origin",
+    "ssh://example.com/repo.git"
+  ],
+  "stdout": {
+    "pattern": "Set push URL for remote 'origin' to 'ssh://example.com/repo.git'\n"
+  }
+}

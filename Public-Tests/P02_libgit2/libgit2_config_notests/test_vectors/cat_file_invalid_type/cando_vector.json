@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "cat-file",
+    "badtype",
+    "HEAD"
+  ],
+  "stderr": {
+    "pattern": "git2: invalid object type 'badtype'\n"
+  },
+  "rc": 129
+}

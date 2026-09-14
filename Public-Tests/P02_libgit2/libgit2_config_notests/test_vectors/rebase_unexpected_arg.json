@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "rebase",
+    "a",
+    "b",
+    "c"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: c\nusage: git2 rebase [--continue|--abort] [--onto=<newbase>] [<upstream>]\n                    [<branch>]\n"
+  },
+  "rc": 129
+}

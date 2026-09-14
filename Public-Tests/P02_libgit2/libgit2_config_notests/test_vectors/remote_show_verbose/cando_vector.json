@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "show",
+    "--",
+    "-v"
+  ],
+  "stdout": {
+    "pattern": "backup\thttps://example.com/backup.git (fetch)\nbackup\thttps://example.com/backup.git (push)\norigin\thttps://example.com/repo.git (fetch)\norigin\tssh://example.com/repo.git (push)\n"
+  }
+}

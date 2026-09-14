@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "hash-object",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 hash-object [-t <type>] [-w] [--literally] (--stdin|<file>...)\n\nCompute the object ID for a given file and optionally write that file\nto the object database.\n\nOptions:\n    --stdin\n        read content from stdin\n    <file>...\n        the file (or files) to read and hash\n    -t <type>\n        the type of object to hash (default: \"blob\")\n    -w\n        write the object to the object database\n    --literally\n        do not validate the object contents\n"
+  }
+}

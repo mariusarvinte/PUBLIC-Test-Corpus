@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "index-pack",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 index-pack [-v] [--] (--stdin|<pack-file>)\n\nIndexes a packfile and writes the index to disk.\n\nOptions:\n    --stdin\n        read from stdin\n    <pack-file>\n        packfile path\n    -v, --verbose\n        display progress output\n"
+  }
+}

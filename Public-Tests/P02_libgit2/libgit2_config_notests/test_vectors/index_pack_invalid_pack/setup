@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/out"
+mkdir -p "${DEFAULT_RUN_DIR}/out"
+printf '%s\n' 'not a packfile' > "${DEFAULT_RUN_DIR}/out/bad.pack"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/out" > "${WORKING_DIR_FILE}"

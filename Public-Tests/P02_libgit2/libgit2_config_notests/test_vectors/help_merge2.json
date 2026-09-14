@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "merge",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 merge [--no-commit] <commit>...\n\nJoin two or more development histories together.\n\nOptions:\n    <commit>...\n        commit(s) to merge into current branch\n    --no-commit\n        don't create a merge commit\n"
+  }
+}

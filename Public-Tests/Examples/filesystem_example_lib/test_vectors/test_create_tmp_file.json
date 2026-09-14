@@ -1,0 +1,21 @@
+{
+  "lib_state_in": {
+    "operation": "create_tmp_file",
+    "file_name": "temp_file.txt",
+    "file_content": null,
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "lib_state_out": {
+    "operation": "create_tmp_file",
+    "file_name": "temp_file.txt",
+    "file_content": null,
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "stdout": {
+    "pattern": "Temporary file created\nTemporary file deleted\n"
+  }
+}

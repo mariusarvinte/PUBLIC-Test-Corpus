@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "submodule",
+    "update"
+  ],
+  "stderr": {
+    "pattern": "git2: submodule is not initialized\n"
+  }
+}

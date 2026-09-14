@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "log",
+    "--oneline",
+    "HEAD",
+    "--",
+    "story.txt"
+  ],
+  "stderr": {
+    "pattern": "git2: revspec '--' not found\n"
+  },
+  "rc": 253
+}

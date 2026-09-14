@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_tritanopia_lib_runner"
+name = "_tritanopia_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

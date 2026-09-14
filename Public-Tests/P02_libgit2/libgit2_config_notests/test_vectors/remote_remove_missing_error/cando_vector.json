@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "remove",
+    "nope"
+  ],
+  "stderr": {
+    "pattern": "git2: remote 'nope' does not exist\n"
+  },
+  "rc": 128
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo" "${DEFAULT_RUN_DIR}/wt2"
+tar --no-same-owner -C "${DEFAULT_RUN_DIR}" -xzf "${TEST_RESOURCES}/repo.tar.gz"
+mv "${DEFAULT_RUN_DIR}/repo/.gitted" "${DEFAULT_RUN_DIR}/repo/.git"
+git -C "${DEFAULT_RUN_DIR}/repo" worktree add --lock "${DEFAULT_RUN_DIR}/wt2" topic2 >/dev/null 2>&1
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

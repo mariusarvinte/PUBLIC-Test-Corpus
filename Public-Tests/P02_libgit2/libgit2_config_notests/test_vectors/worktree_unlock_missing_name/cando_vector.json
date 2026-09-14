@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "worktree",
+    "unlock"
+  ],
+  "stderr": {
+    "pattern": "git2: unlock requires <name>\n"
+  },
+  "rc": 129
+}

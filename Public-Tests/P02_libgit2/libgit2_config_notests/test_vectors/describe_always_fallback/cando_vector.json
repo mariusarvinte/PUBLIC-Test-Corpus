@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "describe",
+    "--always"
+  ],
+  "stdout": {
+    "pattern": "8b6c4f2\n"
+  }
+}

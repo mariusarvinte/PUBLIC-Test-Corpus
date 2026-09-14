@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+printf '%s\n' 'alpha' > "${DEFAULT_RUN_DIR}/one.txt"
+printf '%s\n' 'beta' > "${DEFAULT_RUN_DIR}/two.txt"
+printf '%s\n' "${DEFAULT_RUN_DIR}" > "${WORKING_DIR_FILE}"

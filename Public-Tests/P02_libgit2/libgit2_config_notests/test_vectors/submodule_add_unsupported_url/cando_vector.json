@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "submodule",
+    "add",
+    "https://example.com/x.git",
+    "deps/x"
+  ],
+  "stderr": {
+    "pattern": "git2: unsupported URL protocol\n"
+  },
+  "rc": 128
+}

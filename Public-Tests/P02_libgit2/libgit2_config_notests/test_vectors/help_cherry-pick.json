@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "cherry-pick"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 cherry-pick [--continue|--abort] [-m <parent-number>] [<commit>]\n\nApply the changes introduced by an existing commit.\n\nExamples:\n  git2 cherry-pick <commit>\n  git2 cherry-pick -m 1 <merge-commit>\n  git2 cherry-pick --continue\n  git2 cherry-pick --abort\n\nOptions:\n    --continue\n        continue an in-progress cherry-pick\n    --abort\n        abort an in-progress cherry-pick\n    -m <parent-number>, --mainline=<parent-number>\n        select mainline parent for merge commits\n    <commit>\n        commit to cherry-pick\n"
+  }
+}

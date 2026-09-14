@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "fetch"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Dara North",
+    "GIT_AUTHOR_EMAIL": "dara@north.test",
+    "GIT_COMMITTER_NAME": "Dara North",
+    "GIT_COMMITTER_EMAIL": "dara@north.test",
+    "TZ": "UTC",
+    "FAKETIME": "2024-06-01 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "(?s)^Fetching origin\r?\n.*?\\[updated\\] 91fc15cad8\\.\\.cacb4f90df refs/heads/main -> refs/remotes/origin/main\r?\n?$",
+    "is_regex": true
+  }
+}

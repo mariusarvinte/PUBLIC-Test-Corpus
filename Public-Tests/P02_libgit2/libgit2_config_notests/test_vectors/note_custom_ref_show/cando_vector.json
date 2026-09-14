@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "note",
+    "--ref=refs/notes/review",
+    "show",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "review note\n"
+  }
+}

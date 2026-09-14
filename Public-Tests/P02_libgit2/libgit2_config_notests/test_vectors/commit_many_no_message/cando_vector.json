@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "commit"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Tova Reed",
+    "GIT_AUTHOR_EMAIL": "tova@ember.run",
+    "GIT_COMMITTER_NAME": "Tova Reed",
+    "GIT_COMMITTER_EMAIL": "tova@ember.run",
+    "GIT_AUTHOR_DATE": "2024-09-10T11:12:13Z",
+    "GIT_COMMITTER_DATE": "2024-09-10T11:12:13Z"
+  },
+  "stdout": {
+    "pattern": "HEAD not found. Creating first commit\n"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "reset",
+    "--bogus"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: --bogus\nusage: git2 reset [--soft|--mixed|--hard] [<target>] [--] [<pathspec>...]\n"
+  },
+  "rc": 129
+}

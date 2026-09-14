@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/subrepo" "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/subrepo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/subrepo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/subrepo" config maintenance.auto false
+printf '%s\n' 'library' > "${DEFAULT_RUN_DIR}/subrepo/lib.txt"
+git -C "${DEFAULT_RUN_DIR}/subrepo" add lib.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Owen Hart' \
+GIT_AUTHOR_EMAIL='owen@hart.dev' \
+GIT_COMMITTER_NAME='Owen Hart' \
+GIT_COMMITTER_EMAIL='owen@hart.dev' \
+GIT_AUTHOR_DATE='2024-04-04T10:00:00Z' \
+GIT_COMMITTER_DATE='2024-04-04T10:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/subrepo" commit -m 'seed submodule' --no-gpg-sign >/dev/null 2>&1
+
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+GIT_AUTHOR_NAME='Owen Hart' \
+GIT_AUTHOR_EMAIL='owen@hart.dev' \
+GIT_COMMITTER_NAME='Owen Hart' \
+GIT_COMMITTER_EMAIL='owen@hart.dev' \
+GIT_AUTHOR_DATE='2024-04-04T11:00:00Z' \
+GIT_COMMITTER_DATE='2024-04-04T11:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" -c protocol.file.allow=always submodule add "${DEFAULT_RUN_DIR}/subrepo" deps/lib >/dev/null 2>&1
+GIT_AUTHOR_NAME='Owen Hart' \
+GIT_AUTHOR_EMAIL='owen@hart.dev' \
+GIT_COMMITTER_NAME='Owen Hart' \
+GIT_COMMITTER_EMAIL='owen@hart.dev' \
+GIT_AUTHOR_DATE='2024-04-04T12:00:00Z' \
+GIT_COMMITTER_DATE='2024-04-04T12:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m 'add submodule' --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

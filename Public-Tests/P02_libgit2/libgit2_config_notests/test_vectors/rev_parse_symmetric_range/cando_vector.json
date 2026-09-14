@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rev-parse",
+    "HEAD~2...HEAD"
+  ],
+  "stdout": {
+    "pattern": "5625b4287d311da5462c9bcee50df08ddf8fdc80\n8b62ae08b37b537235fd370b80e08e3948ab4aa6\n^8b62ae08b37b537235fd370b80e08e3948ab4aa6\n"
+  }
+}

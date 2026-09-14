@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "cat-file",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 cat-file (-t|-s|-e|-p|<type>) <object>\n\nDisplay the content for the given object in the repository.\n\nOptions:\n    -t\n        display the type of the object\n    -s\n        display the size of the object\n    -e\n        displays nothing unless the object is corrupt\n    -p\n        pretty-print the object\n    <type>\n        the type of object to display\n    <object>\n        the object to display\n"
+  }
+}

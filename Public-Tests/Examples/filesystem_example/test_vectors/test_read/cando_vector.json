@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "read",
+    "test_input.txt"
+  ],
+  "stdout": {
+    "pattern": "This is test content\n"
+  },
+  "rc": 0
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "ls-remote",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 ls-remote [<repository>]\n\nList references in a remote repository.\n\nOptions:\n    <repository>\n        The \"remote\" repository that is the source of a fetch or pull operation. Defaults to \"origin\"\n"
+  }
+}

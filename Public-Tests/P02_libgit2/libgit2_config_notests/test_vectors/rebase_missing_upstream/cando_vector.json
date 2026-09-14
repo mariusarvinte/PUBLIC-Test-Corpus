@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rebase"
+  ],
+  "stderr": {
+    "pattern": "git2: an upstream commit is required\n"
+  },
+  "rc": 129
+}

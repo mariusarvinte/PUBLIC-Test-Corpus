@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "init",
+    "worktree",
+    "--bare",
+    "--separate-git-dir",
+    "repo.git"
+  ],
+  "stderr": {
+    "pattern": "git2: the '--bare' and '--separate-git-dir' options cannot be used together\n"
+  },
+  "rc": 129
+}

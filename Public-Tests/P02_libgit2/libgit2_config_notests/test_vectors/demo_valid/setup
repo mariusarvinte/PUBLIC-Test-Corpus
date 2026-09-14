@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+cp -r "${TEST_RESOURCES}/testrepo" "${DEFAULT_RUN_DIR}"
+mv "${DEFAULT_RUN_DIR}/testrepo/.gitted" "${DEFAULT_RUN_DIR}/testrepo/.git"
+printf '%s\n' "${DEFAULT_RUN_DIR}/testrepo" > "${WORKING_DIR_FILE}"

@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "for-each-ref"
+  ],
+  "stdout": {
+    "pattern": "d362ec4d3cf52b3bae3441406536fef9e2fb2ddd commit\trefs/heads/main\nd362ec4d3cf52b3bae3441406536fef9e2fb2ddd commit\trefs/heads/side\n"
+  }
+}

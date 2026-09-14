@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "push"
+  ],
+  "stderr": {
+    "pattern": "git2: could not find repository at '.'\n"
+  },
+  "rc": 128
+}

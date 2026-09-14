@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "config",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 config [-z] [--system|--global|--local|--file=<filename>]\n                    (--get|--add|--replace-all|--list) [--show-origin]\n                    [--show-scope] [<name>] [<value>] [<regexp>]\n\nQuery and set configuration options.\n\nOptions:\n    --get\n        get a configuration value\n    --add\n        add a configuration value\n    --replace-all\n        add a configuration value, replacing any old values\n    -l, --list\n        list all configuration entries\n    -z, --null\n        use NUL as a separator\n    --system\n        read/write to system configuration\n    --global\n        read/write to global configuration\n    --local\n        read/write to local configuration\n    --file=<filename>\n        read/write to specified configuration file\n    --show-origin\n        show origin of configuration\n    --show-scope\n        show scope of configuration\n    <name>\n        name of configuration entry\n    <value>\n        value of configuration entry\n    <regexp>\n        regular expression of values to replace\n"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "clone",
+    "--depth=nope",
+    "/tmp/clone_invalid_depth_source",
+    "bad_depth"
+  ],
+  "env": {
+    "FAKETIME": "2024-04-06 07:08:09",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stderr": {
+    "pattern": "fatal: depth 'nope' is not valid.\n"
+  },
+  "rc": 128
+}

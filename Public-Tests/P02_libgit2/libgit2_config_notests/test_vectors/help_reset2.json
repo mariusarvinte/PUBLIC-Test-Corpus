@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "reset",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 reset [--soft|--mixed|--hard] [<target>] [--] [<pathspec>...]\n\nReset the current HEAD, index, or working tree to a target state.\n\nWhen pathspecs are provided, only index entries are reset and an explicit\ntarget must be supplied, for example: git2 reset HEAD -- <path>...\n\nOptions:\n    --soft\n        move HEAD only\n    --mixed\n        reset HEAD and index (default)\n    --hard\n        reset HEAD, index, and working tree\n    <target>\n        commit, tag, or other revision to reset to\n    <pathspec>...\n        paths to reset in the index (requires explicit target)\n"
+  }
+}

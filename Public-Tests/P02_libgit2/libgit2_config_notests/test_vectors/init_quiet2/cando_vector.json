@@ -1,0 +1,7 @@
+{
+  "argv": [
+    "init",
+    "new_repo",
+    "--quiet"
+  ]
+}

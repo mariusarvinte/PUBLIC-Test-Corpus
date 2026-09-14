@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_max_size_frame_lib_runner"
+name = "_max_size_frame_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

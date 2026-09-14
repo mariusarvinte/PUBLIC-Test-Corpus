@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "worktree"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 worktree [<subcommand>] [--] [<args>...]\n\nManage multiple working trees attached to a repository.\n\nSubcommands:\n    list                          List linked working trees\n    add [--lock] [--force] <path> [<branch>]\n                                  Add a new working tree\n    lock <name> [reason]          Lock a worktree\n    unlock <name>                 Unlock a worktree\n    prune [--force] <name>        Prune a missing or invalid worktree\n\nOptions:\n    <subcommand>\n        the subcommand (list, add, lock, unlock, prune)\n    <args>...\n        arguments for the subcommand\n"
+  }
+}

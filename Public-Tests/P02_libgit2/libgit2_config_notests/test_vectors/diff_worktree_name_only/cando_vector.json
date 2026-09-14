@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "diff",
+    "--name-only"
+  ],
+  "stdout": {
+    "pattern": "keep.txt\nonly.txt\n"
+  }
+}

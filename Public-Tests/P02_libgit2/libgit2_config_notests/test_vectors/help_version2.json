@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "version",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 version [--build-options]\n\nDisplay version information for git2.\n\nOptions:\n    --build-options\n        show compile-time options\n"
+  }
+}

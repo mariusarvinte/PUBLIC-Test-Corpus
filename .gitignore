@@ -1,6 +1,10 @@
 # DO NOT COMMIT, WILL LEAK TEST CASE NAMES
 Cargo.lock 
 *.lock
+result
+
+# We want to VC the flake.lock
+!flake.lock
 
 # Fuzzing outputs
 **/fuzz/artifacts/

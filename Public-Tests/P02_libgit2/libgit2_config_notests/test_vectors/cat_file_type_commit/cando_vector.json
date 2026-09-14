@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "cat-file",
+    "-t",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "commit\n"
+  }
+}

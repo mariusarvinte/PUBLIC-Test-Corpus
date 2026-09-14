@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/remote.git" "${DEFAULT_RUN_DIR}/src" "${DEFAULT_RUN_DIR}/client"
+git init --bare "${DEFAULT_RUN_DIR}/remote.git" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/remote.git" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/remote.git" config maintenance.auto false
+git init -b main "${DEFAULT_RUN_DIR}/src" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/src" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/src" config maintenance.auto false
+
+printf '%s\n' 'seed' > "${DEFAULT_RUN_DIR}/src/readme.txt"
+git -C "${DEFAULT_RUN_DIR}/src" add readme.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Omar Pike' \
+GIT_AUTHOR_EMAIL='omar@granite.io' \
+GIT_COMMITTER_NAME='Omar Pike' \
+GIT_COMMITTER_EMAIL='omar@granite.io' \
+GIT_AUTHOR_DATE='2024-02-03T04:05:06Z' \
+GIT_COMMITTER_DATE='2024-02-03T04:05:06Z' \
+	git -C "${DEFAULT_RUN_DIR}/src" commit -m seed --no-gpg-sign >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/src" branch topic >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/src" remote add upstream "../remote.git"
+git -C "${DEFAULT_RUN_DIR}/src" push upstream main topic >/dev/null 2>&1
+git init -b main "${DEFAULT_RUN_DIR}/client" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/client" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/client" config maintenance.auto false
+git -C "${DEFAULT_RUN_DIR}/client" remote add upstream "../remote.git"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/client" > "${WORKING_DIR_FILE}"

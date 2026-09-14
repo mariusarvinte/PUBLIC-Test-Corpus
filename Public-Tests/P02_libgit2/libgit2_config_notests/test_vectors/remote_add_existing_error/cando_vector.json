@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "remote",
+    "add",
+    "origin",
+    "https://example.com/repo.git"
+  ],
+  "stderr": {
+    "pattern": "git2: remote 'origin' already exists\n"
+  },
+  "rc": 128
+}

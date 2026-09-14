@@ -1,0 +1,21 @@
+{
+  "lib_state_in": {
+    "operation": "rename",
+    "file_name": "rename_test.txt",
+    "file_content": "new_name.txt",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "lib_state_out": {
+    "operation": "rename",
+    "file_name": "rename_test.txt",
+    "file_content": "new_name.txt",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "stdout": {
+    "pattern": "Path renamed successfully\n"
+  }
+}

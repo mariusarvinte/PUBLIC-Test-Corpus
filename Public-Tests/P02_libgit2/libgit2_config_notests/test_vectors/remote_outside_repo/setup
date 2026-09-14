@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/empty"
+mkdir -p "${DEFAULT_RUN_DIR}/empty"
+printf '%s\n' "${DEFAULT_RUN_DIR}/empty" > "${WORKING_DIR_FILE}"

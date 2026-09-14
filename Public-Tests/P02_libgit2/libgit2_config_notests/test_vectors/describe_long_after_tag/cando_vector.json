@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "describe",
+    "--long"
+  ],
+  "stdout": {
+    "pattern": "v2.0.0-1-gc059547\n"
+  }
+}

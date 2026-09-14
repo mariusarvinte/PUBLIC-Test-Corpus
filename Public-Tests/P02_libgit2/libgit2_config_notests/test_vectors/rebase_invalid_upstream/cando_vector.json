@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "rebase",
+    "no-such-ref"
+  ],
+  "stderr": {
+    "pattern": "git2: revspec 'no-such-ref' not found\ngit2: invalid argument: 'upstream || onto'\n"
+  },
+  "rc": 128
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "chmod",
+    "test_file.txt"
+  ],
+  "stdout": {
+    "pattern": "Permissions changed successfully\n"
+  },
+  "rc": 0
+}

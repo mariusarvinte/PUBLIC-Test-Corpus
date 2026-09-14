@@ -1,0 +1,20 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+[package]
+name = "c_lib_fileops_fuzzer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+cando2 = { path = "../../../../tools/cando2" }
+
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+
+[profile.release]
+debug = true

@@ -1,14 +1,13 @@
 {
-	"lib_state_in": {
-		"a": [
-
-		],
-		"b": [],
-		"size": 0
-	},
-	"lib_state_out": {
-		"a": [],
-		"b": [],
-		"size": 0
-	}
+  "has_ub": "Dereferences NULL pointer",
+  "lib_state_in": {
+    "a": [],
+    "b": [],
+    "size": 0
+  },
+  "lib_state_out": {
+    "a": [],
+    "b": [],
+    "size": 0
+  }
 }

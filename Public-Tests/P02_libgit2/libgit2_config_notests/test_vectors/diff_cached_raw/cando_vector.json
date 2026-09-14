@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "--cached",
+    "--raw"
+  ],
+  "stdout": {
+    "pattern": ":100644 100644 4a58007... cf48de1... M\ta.txt\n:100644 100644 65b2df8... 0bb019b... M\tb.txt\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "--no-pager",
+    "version"
+  ],
+  "stdout": {
+    "pattern": "git2 version 1.9.0\n"
+  }
+}

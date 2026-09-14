@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' 'one' 'two' > "${DEFAULT_RUN_DIR}/repo/story.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add story.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Mara Finn' \
+GIT_AUTHOR_EMAIL='mara@fjord.dev' \
+GIT_COMMITTER_NAME='Mara Finn' \
+GIT_COMMITTER_EMAIL='mara@fjord.dev' \
+GIT_AUTHOR_DATE='2021-06-01T01:02:03Z' \
+GIT_COMMITTER_DATE='2021-06-01T01:02:03Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m base --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'one' 'two changed' > "${DEFAULT_RUN_DIR}/repo/story.txt"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

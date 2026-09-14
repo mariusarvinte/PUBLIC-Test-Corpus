@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "hash-object",
+    "--stdin"
+  ],
+  "stdin": "hello stdin\n",
+  "stdout": {
+    "pattern": "be898d232ab8a1d6a4f526cce1728fa15f46d81d\n"
+  }
+}

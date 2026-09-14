@@ -1,0 +1,3 @@
+`q_math.c` has been modified from its original version to remove a swear word in
+ a comment.  Additionally, some code has been commented out to avoid the use
+ of C features that are out-of-bounds for battery 2.

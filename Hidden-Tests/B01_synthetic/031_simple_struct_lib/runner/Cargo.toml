@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_031_simple_struct_lib_runner"
+name = "_031_simple_struct_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

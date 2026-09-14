@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 harness! {
     state: {
@@ -22,11 +22,11 @@ harness! {
         self.bin = vec![0; self.bin_maxlen];
         self.returns = unsafe {
             (*SYMBOL)(
-                self.bin.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.bin),
                 self.bin_maxlen,
-                self.hex.as_ptr(),
+                util::vec_as_ptr(&self.hex),
                 self.hex_len,
-                self.ignore.as_ptr(),
+                util::vec_as_ptr(&self.ignore),
                 self.hex_end_p as *mut *const c_char
             )
         }

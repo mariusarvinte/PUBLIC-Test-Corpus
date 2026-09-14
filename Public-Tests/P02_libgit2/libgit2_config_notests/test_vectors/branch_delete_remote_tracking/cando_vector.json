@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "branch",
+    "-r",
+    "-d",
+    "origin/main"
+  ],
+  "stdout": {
+    "pattern": "Deleted branch 'origin/main'\n"
+  }
+}

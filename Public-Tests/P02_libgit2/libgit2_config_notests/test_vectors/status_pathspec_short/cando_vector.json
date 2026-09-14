@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "status",
+    "-s",
+    "tracked.txt"
+  ],
+  "stdout": {
+    "pattern": " M tracked.txt\n"
+  }
+}

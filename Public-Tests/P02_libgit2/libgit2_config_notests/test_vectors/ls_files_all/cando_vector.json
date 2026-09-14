@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "ls-files"
+  ],
+  "stdout": {
+    "pattern": "docs/readme.md\nsrc/a.txt\nsrc/b.txt\n"
+  }
+}

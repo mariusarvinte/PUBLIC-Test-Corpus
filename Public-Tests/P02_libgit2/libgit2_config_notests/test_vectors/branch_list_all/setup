@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/origin" "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/origin" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/origin" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/origin" config maintenance.auto false
+
+printf '%s\n' 'base' > "${DEFAULT_RUN_DIR}/origin/file.txt"
+git -C "${DEFAULT_RUN_DIR}/origin" add file.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='tester' \
+GIT_AUTHOR_EMAIL='test@example.com' \
+GIT_COMMITTER_NAME='tester' \
+GIT_COMMITTER_EMAIL='test@example.com' \
+GIT_AUTHOR_DATE='2024-01-01T00:00:00Z' \
+GIT_COMMITTER_DATE='2024-01-01T00:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/origin" commit -m c1 --no-gpg-sign >/dev/null 2>&1
+
+git clone "${DEFAULT_RUN_DIR}/origin" "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+git -C "${DEFAULT_RUN_DIR}/repo" branch topic >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

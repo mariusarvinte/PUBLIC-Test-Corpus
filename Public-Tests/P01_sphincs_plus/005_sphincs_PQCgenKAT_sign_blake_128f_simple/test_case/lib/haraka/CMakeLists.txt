@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 set(HARAKA_SOURCES
     src/haraka.c
     src/hash_haraka.c

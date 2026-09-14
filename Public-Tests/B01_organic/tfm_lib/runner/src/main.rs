@@ -3,9 +3,8 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
-// FIXME: size of dest = 2*count, size of src = 3*count
 harness! {
     state: {
         dest: Vec<c_float>,
@@ -19,8 +18,8 @@ harness! {
         self.dest = vec![0.0; self.count as usize * 2];
         unsafe {
             (*SYMBOL)(
-                self.dest.as_mut_ptr(),
-                self.src.as_ptr(),
+                util::vec_as_mut_ptr(&mut self.dest),
+                util::vec_as_ptr(&self.src),
                 self.count
             )
         }

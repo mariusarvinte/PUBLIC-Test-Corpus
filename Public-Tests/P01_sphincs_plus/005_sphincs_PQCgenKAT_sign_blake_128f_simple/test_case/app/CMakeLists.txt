@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 # Core sources that are common to both variants --- NO random source here
 set(SPHINCS_CORE_COMMON
     src/address.c

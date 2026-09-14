@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_div_euclid_lib_runner"
+name = "_div_euclid_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

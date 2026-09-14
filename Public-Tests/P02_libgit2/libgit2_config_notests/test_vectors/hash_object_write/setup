@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' 'seed' > "${DEFAULT_RUN_DIR}/repo/seed.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add seed.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Lio Mars' \
+GIT_AUTHOR_EMAIL='lio@mars.dev' \
+GIT_COMMITTER_NAME='Lio Mars' \
+GIT_COMMITTER_EMAIL='lio@mars.dev' \
+GIT_AUTHOR_DATE='2024-01-01T00:00:00Z' \
+GIT_COMMITTER_DATE='2024-01-01T00:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m seed --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'write me' > "${DEFAULT_RUN_DIR}/repo/write.txt"
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

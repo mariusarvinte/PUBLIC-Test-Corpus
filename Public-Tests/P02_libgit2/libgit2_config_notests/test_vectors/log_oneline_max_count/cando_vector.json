@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "log",
+    "--oneline",
+    "--max-count=3"
+  ],
+  "stdout": {
+    "pattern": "5625b4287d311da5462c9bcee50df08ddf8fdc80 add note file\n1aa8cad2f0197b5dae8f57275f286aad7a5f1b04 add ending\n8b62ae08b37b537235fd370b80e08e3948ab4aa6 init story\n"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "worktree",
+    "lock",
+    "wt",
+    "reason"
+  ],
+  "stdout": {
+    "pattern": "Locked worktree 'wt'\n"
+  }
+}

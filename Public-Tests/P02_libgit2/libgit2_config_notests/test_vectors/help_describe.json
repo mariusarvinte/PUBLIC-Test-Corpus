@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "describe"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 describe [--all] [--tags] [--exact-match] [--long] [--always]\n                      [--first-parent] [--abbrev=<n>] [--candidates=<n>]\n                      [--match=<pattern>] [--dirty[=<match>]|<commit-ish>...]\n\nGive an object a human readable name based on an available ref.\n\nOptions:\n    --all\n        Instead of using only the annotated tags, use any ref found in refs/ namespace\n    --tags\n        Instead of using only the annotated tags, use any tag found in refs/tags namespace\n    --exact-match\n        Only output exact matches (a tag directly references the supplied commit)\n    --long\n        Always output the long format (the tag, the number of commits and the abbreviated commit name) even when it matches a tag\n    --always\n        Show uniquely abbreviated commit object as fallback\n    --first-parent\n        Follow only the first parent commit upon seeing a merge commit\n    --abbrev=<n>\n        Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use <n> digits, or as many digits as needed to form a unique object name\n    --candidates=<n>\n        Instead of considering only the 10 most recent tags as candidates to describe the input commit-ish consider up to <n> candidates\n    --match=<pattern>\n        Only consider tags matching the given glob(7) pattern, excluding the \"refs/tags/\" prefix\n    --dirty[=<match>]\n        Describe the state of the working tree\n    <commit-ish>...\n        Commit-ish object names to describe. Defaults to HEAD if omitted\n"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "tag",
+    "-a",
+    "-m",
+    "note",
+    "release"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Tag Tester",
+    "GIT_AUTHOR_EMAIL": "tag@example.test",
+    "GIT_COMMITTER_NAME": "Tag Tester",
+    "GIT_COMMITTER_EMAIL": "tag@example.test",
+    "GIT_AUTHOR_DATE": "2025-02-06T06:07:08Z",
+    "GIT_COMMITTER_DATE": "2025-02-06T06:07:08Z",
+    "FAKETIME": "2025-02-06 06:07:08",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Created annotated tag 'release'\n"
+  }
+}

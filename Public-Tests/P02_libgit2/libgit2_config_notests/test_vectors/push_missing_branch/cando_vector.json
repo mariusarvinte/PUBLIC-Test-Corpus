@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "push",
+    "origin",
+    "ghost"
+  ],
+  "has_ub": "Confirmed heap buffer overflow in CLI push refspec construction: push.c allocates using strlen(\"refs/head/\") but sprintf writes \"refs/heads/%s\".",
+  "env": {
+    "GIT_AUTHOR_NAME": "Omar Reed",
+    "GIT_AUTHOR_EMAIL": "omar@example.test",
+    "GIT_COMMITTER_NAME": "Omar Reed",
+    "GIT_COMMITTER_EMAIL": "omar@example.test",
+    "GIT_AUTHOR_DATE": "2024-08-13T13:14:15Z",
+    "GIT_COMMITTER_DATE": "2024-08-13T13:14:15Z",
+    "FAKETIME": "2024-08-13 13:14:15",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stderr": {
+    "pattern": "git2: src refspec 'refs/heads/ghost' does not match any existing object\n"
+  },
+  "rc": 255
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "tag",
+    "-d",
+    "light"
+  ],
+  "stdout": {
+    "pattern": "Deleted tag 'light' (was 198c3c5)\n"
+  }
+}

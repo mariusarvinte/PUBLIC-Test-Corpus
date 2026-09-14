@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "-c",
+    "core.editor=ed",
+    "config",
+    "--get",
+    "core.editor"
+  ],
+  "stdout": {
+    "pattern": "ed\n"
+  }
+}

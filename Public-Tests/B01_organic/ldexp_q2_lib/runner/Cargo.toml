@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_ldexp_q2_lib_runner"
+name = "_ldexp_q2_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

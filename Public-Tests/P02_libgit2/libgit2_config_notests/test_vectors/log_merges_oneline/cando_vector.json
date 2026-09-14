@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "log",
+    "--oneline",
+    "--merges"
+  ],
+  "stdout": {
+    "pattern": "f4e8bdf24d7578344754067c6e21795fa2bccfa2 merge side\n"
+  }
+}

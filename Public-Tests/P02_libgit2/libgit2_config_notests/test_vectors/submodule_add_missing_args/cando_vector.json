@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "submodule",
+    "add"
+  ],
+  "stderr": {
+    "pattern": "git2: add requires <url> and <path>\n"
+  },
+  "rc": 129
+}

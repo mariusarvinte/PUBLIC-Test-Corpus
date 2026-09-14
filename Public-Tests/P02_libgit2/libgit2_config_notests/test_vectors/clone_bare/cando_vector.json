@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "clone",
+    "--bare",
+    "/tmp/p02_clone_bare_repo",
+    "bare_clone"
+  ],
+  "env": {
+    "GIT_AUTHOR_DATE": "2024-01-01T00:00:00Z",
+    "GIT_COMMITTER_DATE": "2024-01-01T00:00:00Z"
+  },
+  "stdout": {
+    "pattern": "Cloning into 'bare_clone'...\n"
+  }
+}

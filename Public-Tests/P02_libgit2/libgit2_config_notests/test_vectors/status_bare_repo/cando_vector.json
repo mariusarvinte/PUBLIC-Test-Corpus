@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "status"
+  ],
+  "stderr": {
+    "pattern": "git2: cannot report status on bare repository\n"
+  },
+  "rc": 1
+}

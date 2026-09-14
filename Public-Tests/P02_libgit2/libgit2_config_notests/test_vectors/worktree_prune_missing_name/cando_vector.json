@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "worktree",
+    "prune"
+  ],
+  "stderr": {
+    "pattern": "git2: prune requires <name>\n"
+  },
+  "rc": 129
+}

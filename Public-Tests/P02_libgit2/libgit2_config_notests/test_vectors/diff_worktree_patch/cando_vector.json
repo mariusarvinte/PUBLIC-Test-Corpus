@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "diff"
+  ],
+  "stdout": {
+    "pattern": "diff --git a/story.txt b/story.txt\nindex 814f4a4..f4f6762 100644\n--- a/story.txt\n+++ b/story.txt\n@@ -1,2 +1,2 @@\n one\n-two\n+two changed\n"
+  }
+}

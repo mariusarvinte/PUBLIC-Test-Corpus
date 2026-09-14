@@ -1,0 +1,71 @@
+- macro: open_write
+  condition: (evt.type=open or evt.type=openat) and evt.is_open_write=true and fd.typechar='f' and fd.num>=0
+
+- macro: rename
+  condition: evt.type in (rename, renameat)
+
+- macro: mkdir
+  condition: evt.type = mkdir
+
+- macro: remove
+  condition: evt.type in (rmdir, unlink, unlinkat)
+
+# - macro: spawned_process
+#   condition: (evt.type in (execve, execveat))
+
+# - macro: inbound
+#   condition: >
+#     ((evt.type in (accept,listen)) or
+#      (fd.typechar = 4 or fd.typechar = 6) and
+#      (fd.ip != "0.0.0.0" and fd.net != "127.0.0.0/8") and (evt.rawres >= 0 or evt.res = EINPROGRESS))
+
+# - macro: outbound
+#   condition: >
+#     ((evt.type = connect) or
+#      (fd.typechar = 4 or fd.typechar = 6) and
+#      (fd.ip != "0.0.0.0" and fd.net != "127.0.0.0/8") and (evt.rawres >= 0 or evt.res = EINPROGRESS))
+
+# - macro: inbound_outbound
+#   condition: >
+#     ((evt.type in (accept,listen,connect)) or
+#      (fd.typechar = 4 or fd.typechar = 6) and
+#      (fd.ip != "0.0.0.0" and fd.net != "127.0.0.0/8") and (evt.rawres >= 0 or evt.res = EINPROGRESS))
+
+- macro: create_symlink
+  condition: (evt.type in (symlink, symlinkat))
+
+- macro: create_hardlink
+  condition: (evt.type in (link, linkat))
+
+- macro: chmod
+  condition: (evt.type in (chmod, fchmod, fchmodat))
+
+- macro: file_operation
+  condition: (chmod or mkdir or rename or remove or open_write or create_symlink or create_hardlink)
+
+- list: build_utilities
+  items: [cargo, ninja, dirname, run_ci.sh, cmake, python3, rustc, cc, collect2]
+
+- macro: spawned_by_cando
+  condition: >
+    proc.pcmdline contains "cando_runner" 
+
+- macro: is_not_build_utility
+  condition: >
+    not proc.name in (build_utilities) and not proc.pcmdline contains cmake and not proc.pcmdline contains python3
+
+- rule: Any File Related Operation Precipitated by Cando
+  desc: Detect any file operation caused by a program driver or its descendants
+  condition: spawned_by_cando and file_operation and is_not_build_utility
+  output: >
+      File Operation (
+        container_id=%container.id
+        evt.type=%evt.type 
+        evt.arg.flags=%evt.arg.flags
+        path=%fs.path.name
+        source=%fs.path.source
+        target=%fs.path.target
+        proc.cmdline=%proc.cmdline
+        proc.pcmdline=%proc.pcmdline)
+  priority: DEBUG
+  source: syscall

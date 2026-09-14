@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+printf '%s\n' 'alpha' | git -C "${DEFAULT_RUN_DIR}/repo" hash-object -w --stdin >/dev/null
+git -C "${DEFAULT_RUN_DIR}/repo" update-index --add --cacheinfo 100644,4a58007052a65fbc2fc3f910f2855f45a4058e74,alpha.txt >/dev/null
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

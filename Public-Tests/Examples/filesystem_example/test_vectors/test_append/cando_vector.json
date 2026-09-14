@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "append",
+    "append_test.txt",
+    " Appended!"
+  ],
+  "stdout": {
+    "pattern": "Content appended successfully\n"
+  },
+  "rc": 0
+}

@@ -1,0 +1,16 @@
+{
+  "lib_state_in": {
+    "a": 4,
+    "b": 5,
+    "returns": 0
+  },
+  "lib_state_out": {
+    "a": 4,
+    "b": 5,
+    "returns": 9
+  },
+  "stdout": {
+    "pattern": "(?m)^.*Hello World\\n$",
+    "is_regex": true
+  }
+}

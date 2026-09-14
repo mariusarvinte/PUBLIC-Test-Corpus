@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "status",
+    "--list-submodules"
+  ],
+  "stdout": {
+    "pattern": "# On branch main\n# Submodules\n# - submodule 'deps/lib' at deps/lib\n"
+  }
+}

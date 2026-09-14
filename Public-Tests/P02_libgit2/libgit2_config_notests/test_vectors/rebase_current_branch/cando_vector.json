@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "rebase",
+    "gravy"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Rhea Moss",
+    "GIT_AUTHOR_EMAIL": "rhea@example.test",
+    "GIT_COMMITTER_NAME": "Rhea Moss",
+    "GIT_COMMITTER_EMAIL": "rhea@example.test",
+    "GIT_AUTHOR_DATE": "2024-09-01T01:02:03Z",
+    "GIT_COMMITTER_DATE": "2024-09-01T01:02:03Z",
+    "FAKETIME": "2024-09-01 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "applied 7600bc508360156f072fd8ba8bd65bc04525f5be\napplied 882acf8b9ba6281e91531aab6b32e7ba8c145aff\napplied afd213100567c10a08b0111ec77a9041ef46f1de\napplied e0cdb4e0b9d3bc0d875a8a4ab79bf49e8e066de0\napplied 48c644abddf7305e9470f708f5efe67e5d035c81\nSuccessfully rebased current branch\n"
+  }
+}

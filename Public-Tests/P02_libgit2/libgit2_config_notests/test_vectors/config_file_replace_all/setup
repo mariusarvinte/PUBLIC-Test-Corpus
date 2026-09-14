@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -f "${DEFAULT_RUN_DIR}/custom.cfg"
+git config -f "${DEFAULT_RUN_DIR}/custom.cfg" --add demo.mode auto >/dev/null 2>&1
+git config -f "${DEFAULT_RUN_DIR}/custom.cfg" --add demo.mode manual >/dev/null 2>&1
+git config -f "${DEFAULT_RUN_DIR}/custom.cfg" --add demo.mode auto >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}" > "${WORKING_DIR_FILE}"

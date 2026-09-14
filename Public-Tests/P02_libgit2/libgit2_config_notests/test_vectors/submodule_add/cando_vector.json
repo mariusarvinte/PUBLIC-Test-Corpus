@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "submodule",
+    "add",
+    "../sub",
+    "deps/sub"
+  ],
+  "env": {
+    "GIT_ALLOW_PROTOCOL": "file",
+    "FAKETIME": "2025-01-04 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Added submodule 'deps/sub' at '../sub'\n"
+  }
+}

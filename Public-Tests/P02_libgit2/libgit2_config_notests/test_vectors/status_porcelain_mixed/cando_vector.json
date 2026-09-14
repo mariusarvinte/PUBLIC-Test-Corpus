@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "status",
+    "--porcelain"
+  ],
+  "stdout": {
+    "pattern": "A  staged.txt\n M tracked.txt\n?? untracked.txt\n"
+  }
+}

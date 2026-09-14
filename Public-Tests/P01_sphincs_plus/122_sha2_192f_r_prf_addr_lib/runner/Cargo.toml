@@ -1,5 +1,8 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 [package]
-name = "_122_sha2_192f_r_prf_addr_lib_runner"
+name = "_122_sha2_192f_r_prf_addr_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

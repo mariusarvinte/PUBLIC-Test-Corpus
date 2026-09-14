@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_021_complex_goto_lib_runner"
+name = "_021_complex_goto_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

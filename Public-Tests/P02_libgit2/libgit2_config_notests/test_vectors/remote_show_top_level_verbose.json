@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "show",
+    "-v"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: -v\nusage: git2 remote <command> [--] [<args>...]\n"
+  },
+  "rc": 129
+}

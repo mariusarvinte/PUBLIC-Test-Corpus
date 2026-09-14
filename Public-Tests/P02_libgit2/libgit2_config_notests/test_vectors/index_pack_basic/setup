@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/src" "${DEFAULT_RUN_DIR}/out"
+git init -b main "${DEFAULT_RUN_DIR}/src" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/src" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/src" config maintenance.auto false
+
+printf '%s\n' 'hello' > "${DEFAULT_RUN_DIR}/src/a.txt"
+git -C "${DEFAULT_RUN_DIR}/src" add a.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Ira Moss' \
+GIT_AUTHOR_EMAIL='ira@moss.dev' \
+GIT_COMMITTER_NAME='Ira Moss' \
+GIT_COMMITTER_EMAIL='ira@moss.dev' \
+GIT_AUTHOR_DATE='2024-02-03T04:05:06Z' \
+GIT_COMMITTER_DATE='2024-02-03T04:05:06Z' \
+	git -C "${DEFAULT_RUN_DIR}/src" commit -m seed --no-gpg-sign >/dev/null 2>&1
+
+mkdir -p "${DEFAULT_RUN_DIR}/out"
+git -C "${DEFAULT_RUN_DIR}/src" rev-list --objects --all | \
+	git -C "${DEFAULT_RUN_DIR}/src" pack-objects --stdout > "${DEFAULT_RUN_DIR}/out/sample.pack"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/out" > "${WORKING_DIR_FILE}"

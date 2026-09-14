@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "--cached",
+    "--numstat"
+  ],
+  "stdout": {
+    "pattern": "1       1       a.txt\n1       1       b.txt\n"
+  }
+}

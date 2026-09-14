@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "config",
+    "--local",
+    "--list",
+    "--show-origin"
+  ],
+  "stdout": {
+    "pattern": "file:/tmp/runtime/repo/.git/config\tcore.repositoryformatversion=0\nfile:/tmp/runtime/repo/.git/config\tcore.filemode=true\nfile:/tmp/runtime/repo/.git/config\tcore.bare=false\nfile:/tmp/runtime/repo/.git/config\tcore.logallrefupdates=true\nfile:/tmp/runtime/repo/.git/config\tcore.editor=nano\nfile:/tmp/runtime/repo/.git/config\tgc.auto=0\nfile:/tmp/runtime/repo/.git/config\tmaintenance.auto=false\nfile:/tmp/runtime/repo/.git/config\tuser.name=Ada\n"
+  }
+}

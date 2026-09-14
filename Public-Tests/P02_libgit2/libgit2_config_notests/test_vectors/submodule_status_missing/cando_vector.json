@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "submodule",
+    "status",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: no submodule named 'extra'\n"
+  },
+  "rc": 128
+}

@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[gc]
+	auto = 0
+[maintenance]
+	auto = false
+[user]
+	email = invalid@example.test
+	name = Juno Blaze

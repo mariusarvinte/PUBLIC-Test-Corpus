@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "config",
+    "--get"
+  ],
+  "stderr": {
+    "pattern": "git2: config --get requires an argument\n"
+  },
+  "rc": 129
+}

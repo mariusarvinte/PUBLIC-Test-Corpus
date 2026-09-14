@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "tag",
+    "-a",
+    "broken"
+  ],
+  "stderr": {
+    "pattern": "git2: message required for annotated tag (use -m)\n"
+  },
+  "rc": 129
+}

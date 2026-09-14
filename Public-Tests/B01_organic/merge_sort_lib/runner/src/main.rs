@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 state_member! {
     struct spritebatch_sprite_t {
@@ -31,8 +31,8 @@ harness! {
         ];
         unsafe {
             (*SYMBOL)(
-                self.a.as_mut_ptr(),
-                self.b.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.a),
+                util::vec_as_mut_ptr(&mut self.b),
                 self.size
             )
         }

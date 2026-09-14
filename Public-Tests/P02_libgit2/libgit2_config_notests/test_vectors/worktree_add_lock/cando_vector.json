@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "worktree",
+    "add",
+    "--",
+    "--lock",
+    "../wt2",
+    "topic2"
+  ],
+  "stdout": {
+    "pattern": "Added worktree 'wt2' at '/tmp/runtime/wt2'\n"
+  }
+}

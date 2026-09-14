@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "branch",
+    "-d",
+    "a"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "tester",
+    "GIT_AUTHOR_EMAIL": "test@example.com",
+    "GIT_COMMITTER_NAME": "tester",
+    "GIT_COMMITTER_EMAIL": "test@example.com",
+    "GIT_AUTHOR_DATE": "2024-01-01T00:00:00Z",
+    "GIT_COMMITTER_DATE": "2024-01-01T00:00:00Z"
+  },
+  "stdout": {
+    "pattern": "Deleted branch 'a'\n"
+  }
+}

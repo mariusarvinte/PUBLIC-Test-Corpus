@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "note",
+    "list"
+  ],
+  "stdout": {
+    "pattern": "183f1e3dd734b76e9478ab389f08849854691350 52befb82011f2b45d30194477dbb745ec68e9b3e\n"
+  }
+}

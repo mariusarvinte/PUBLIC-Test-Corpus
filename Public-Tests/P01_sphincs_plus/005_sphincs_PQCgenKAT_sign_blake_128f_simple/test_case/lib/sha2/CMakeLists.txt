@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 set(SHA2_SOURCES
     src/sha2.c
     src/hash_sha2.c

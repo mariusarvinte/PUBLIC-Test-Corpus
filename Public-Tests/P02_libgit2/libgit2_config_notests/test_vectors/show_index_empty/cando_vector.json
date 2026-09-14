@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "show-index"
+  ],
+  "stdout": {
+    "pattern": "Empty index\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "show-index",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 show-index\n\nDisplay the contents of the index.\n\nThis command shows detailed information about each entry in the\ngit index (staging area), including the blob SHA, file mode,\nfile size, and timestamp information.\n\n"
+  }
+}

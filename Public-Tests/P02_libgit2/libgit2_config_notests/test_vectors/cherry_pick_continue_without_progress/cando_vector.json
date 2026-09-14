@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "cherry-pick",
+    "--continue"
+  ],
+  "stderr": {
+    "pattern": "git2: there is no cherry-pick in progress\n"
+  },
+  "rc": 129
+}

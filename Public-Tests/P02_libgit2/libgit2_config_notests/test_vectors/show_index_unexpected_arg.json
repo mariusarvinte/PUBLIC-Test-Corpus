@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "show-index",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: extra\nusage: git2 show-index\n"
+  },
+  "rc": 129
+}

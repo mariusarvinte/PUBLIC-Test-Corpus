@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "add"
+  ],
+  "stderr": {
+    "pattern": "git2: argument 'file-spec' is required.\nusage: git2 add [-n] [-v] [-u] <file-spec>...\n"
+  },
+  "rc": 129
+}

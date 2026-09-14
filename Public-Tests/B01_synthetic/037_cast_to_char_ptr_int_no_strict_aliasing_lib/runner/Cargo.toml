@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_037_cast_to_char_ptr_int_no_strict_aliasing_lib_runner"
+name = "_037_cast_to_char_ptr_int_no_strict_aliasing_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

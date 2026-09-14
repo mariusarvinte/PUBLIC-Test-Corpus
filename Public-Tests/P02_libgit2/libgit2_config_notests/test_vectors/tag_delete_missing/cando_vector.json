@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "tag",
+    "-d",
+    "missing"
+  ],
+  "stderr": {
+    "pattern": "git2: revspec 'missing' not found\n"
+  },
+  "rc": 128
+}

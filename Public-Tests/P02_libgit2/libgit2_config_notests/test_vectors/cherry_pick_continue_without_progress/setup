@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+
+printf '%s\n' 'seed' > "${DEFAULT_RUN_DIR}/repo/f.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add f.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Ezra Bloom' \
+GIT_AUTHOR_EMAIL='ezra.bloom@willow.app' \
+GIT_COMMITTER_NAME='Ezra Bloom' \
+GIT_COMMITTER_EMAIL='ezra.bloom@willow.app' \
+GIT_AUTHOR_DATE='2026-08-12T16:05:39Z' \
+GIT_COMMITTER_DATE='2026-08-12T16:05:39Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m seed --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

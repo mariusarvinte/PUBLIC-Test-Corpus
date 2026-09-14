@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 type wchar_t = i32;
 
@@ -20,9 +20,9 @@ harness! {
     fn run(&mut self) {
         self.returns = unsafe {
             (*SYMBOL)(
-                self.dst.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.dst),
                 self.numElem,
-                self.src.as_ptr(),
+                util::vec_as_ptr(&self.src),
             )
         }
     }

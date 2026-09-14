@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "worktree",
+    "prune",
+    "wt2"
+  ],
+  "stderr": {
+    "pattern": "git2: not pruning locked working tree: 'added with --lock\n'\n"
+  },
+  "rc": 128
+}

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "config",
+    "--global",
+    "--list",
+    "--show-origin"
+  ],
+  "env": {
+    "HOME": "/tmp/runtime/home"
+  },
+  "stdout": {
+    "pattern": "file:/tmp/runtime/home/.gitconfig\tuser.name=GlobalAda\nfile:/tmp/runtime/home/.gitconfig\tcore.editor=vi\n"
+  }
+}

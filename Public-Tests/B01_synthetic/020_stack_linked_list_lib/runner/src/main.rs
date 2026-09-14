@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 #[repr(C)]
 #[derive(Clone)]
@@ -29,7 +29,7 @@ harness! {
             };
             self.values.len()
         ];
-        
+
         for i in 0..self.values.len() {
             nodes[i].value = self.values[i];
             if i != self.values.len()-1 {
@@ -37,7 +37,10 @@ harness! {
             }
         }
 
-        self.returns = unsafe { (*SYMBOL)(nodes.as_mut_ptr()) };
+        self.returns = unsafe {
+            (*SYMBOL)(
+                util::vec_as_mut_ptr(&mut nodes),
+            )
+        };
     }
 }
-

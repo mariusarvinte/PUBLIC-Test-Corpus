@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/template" "${DEFAULT_RUN_DIR}/templated_repo"
+mkdir -p "${DEFAULT_RUN_DIR}/template/hooks"
+mkdir -p "${DEFAULT_RUN_DIR}/template/info"
+
+printf '%s\n' '#!/bin/sh' 'exit 0' > "${DEFAULT_RUN_DIR}/template/hooks/pre-commit"
+printf '%s\n' 'exclude-me' > "${DEFAULT_RUN_DIR}/template/info/exclude"
+chmod +x "${DEFAULT_RUN_DIR}/template/hooks/pre-commit"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}" > "${WORKING_DIR_FILE}"

@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "tag"
+  ],
+  "stdout": {
+    "pattern": "ann             \nlight           \n"
+  }
+}

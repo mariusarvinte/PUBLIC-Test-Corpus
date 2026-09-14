@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "clone",
+    "-n",
+    "/tmp/clone_no_checkout_source",
+    "no_checkout"
+  ],
+  "env": {
+    "FAKETIME": "2024-09-11 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Cloning into 'no_checkout'...\n"
+  }
+}

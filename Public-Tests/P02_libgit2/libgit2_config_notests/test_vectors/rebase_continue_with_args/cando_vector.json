@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "rebase",
+    "--continue",
+    "gravy"
+  ],
+  "stderr": {
+    "pattern": "git2: --continue does not accept branch arguments\n"
+  },
+  "rc": 129
+}

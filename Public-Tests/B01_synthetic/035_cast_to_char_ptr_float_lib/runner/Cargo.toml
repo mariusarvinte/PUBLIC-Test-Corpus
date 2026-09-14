@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_035_cast_to_char_ptr_float_lib_runner"
+name = "_035_cast_to_char_ptr_float_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

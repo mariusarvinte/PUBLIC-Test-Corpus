@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "ls-files",
+    "src/a.txt",
+    "docs/readme.md"
+  ],
+  "stdout": {
+    "pattern": "src/a.txt\ndocs/readme.md\n"
+  }
+}

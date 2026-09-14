@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 help [--help] [-c <key=value>] [--config-env=<key=value>]\n                  [--no-pager] [<command>]\n\nDisplay help information about git2.  If a command is specified, help\nabout that command will be shown.  Otherwise, general information about\ngit2 will be shown, including the commands available.\n"
+  }
+}

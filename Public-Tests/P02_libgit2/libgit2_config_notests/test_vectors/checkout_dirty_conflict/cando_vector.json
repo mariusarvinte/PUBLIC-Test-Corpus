@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "checkout",
+    "side"
+  ],
+  "stderr": {
+    "pattern": "git2: 1 conflict prevents checkout\n"
+  },
+  "rc": 243
+}

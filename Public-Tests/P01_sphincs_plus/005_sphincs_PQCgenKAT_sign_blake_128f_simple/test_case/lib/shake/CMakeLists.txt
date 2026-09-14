@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 set(SHAKE_SOURCES
     src/fips202.c
     src/hash_shake.c

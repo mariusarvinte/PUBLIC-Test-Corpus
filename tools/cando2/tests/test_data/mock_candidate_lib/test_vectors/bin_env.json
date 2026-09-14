@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "6"
+  ],
+  "env": {
+    "CANDO_TEST_VECTOR_ENV": "from test vector"
+  },
+  "stdout": {
+    "pattern": "from test vector\n"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "stash",
+    "bogus"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown subcommand 'bogus'\n"
+  },
+  "rc": 129
+}

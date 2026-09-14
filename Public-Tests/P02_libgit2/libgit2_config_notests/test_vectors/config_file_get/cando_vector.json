@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "config",
+    "--file",
+    "custom.cfg",
+    "--get",
+    "user.email"
+  ],
+  "stdout": {
+    "pattern": "ivy@glade.io\n"
+  }
+}

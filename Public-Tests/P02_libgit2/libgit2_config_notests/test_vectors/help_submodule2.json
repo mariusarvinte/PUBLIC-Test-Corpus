@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "submodule",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 submodule [--init] [<subcommand>] [--] [<args>...]\n\nManage submodules.\n\nSubcommands:\n    status [<name>...]            Show submodule status\n    add <url> <path>              Add a new submodule\n    init [<name>...]              Copy submodule config into .git/config\n    update [--init] [<name>...]   Clone or update submodules\n    sync [<name>...]              Sync submodule URL configuration\n\nOptions:\n    --init\n        initialize submodules before updating\n    <subcommand>\n        the subcommand (status, add, init, update, sync)\n    <args>...\n        arguments for the subcommand\n"
+  }
+}

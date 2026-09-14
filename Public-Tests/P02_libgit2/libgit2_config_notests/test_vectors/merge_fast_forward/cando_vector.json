@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "merge",
+    "ff_branch"
+  ],
+  "env": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "core.logAllRefUpdates",
+    "GIT_CONFIG_VALUE_0": "false",
+    "FAKETIME": "2024-07-01 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Fast-forward\n"
+  }
+}

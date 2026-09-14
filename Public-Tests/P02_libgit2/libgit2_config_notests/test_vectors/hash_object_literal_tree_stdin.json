@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "hash-object",
+    "-t",
+    "tree",
+    "--stdin",
+    "--literally"
+  ],
+  "stdin": "tree 5\nabc\n",
+  "stdout": {
+    "pattern": "826b3e72f644423036a025a5cbf4710d0d184bc5\n"
+  }
+}

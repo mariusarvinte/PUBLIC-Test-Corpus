@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "tag",
+    "-f",
+    "light",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "Created lightweight tag 'light'\n"
+  }
+}

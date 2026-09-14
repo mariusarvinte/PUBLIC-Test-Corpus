@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rev-list"
+  ],
+  "stderr": {
+    "pattern": "git2: argument 'revspec' is required.\nusage: git2 rev-list [--topo-order] [--date-order] [--reverse] [--]\n                      <revspec>...\n"
+  },
+  "rc": 129
+}

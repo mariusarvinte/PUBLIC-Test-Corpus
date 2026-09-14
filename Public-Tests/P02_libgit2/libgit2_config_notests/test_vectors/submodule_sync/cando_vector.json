@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "submodule",
+    "sync"
+  ],
+  "stdout": {
+    "pattern": "Synchronized submodule 'testrepo'\n"
+  }
+}

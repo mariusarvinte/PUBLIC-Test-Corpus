@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "worktree",
+    "prune",
+    "wt"
+  ],
+  "stdout": {
+    "pattern": "Pruned worktree 'wt'\n"
+  }
+}

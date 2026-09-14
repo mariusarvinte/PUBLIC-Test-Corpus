@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "reset",
+    "--hard",
+    "HEAD",
+    "--",
+    "f.txt"
+  ],
+  "stderr": {
+    "pattern": "git2: pathspec reset only supports the default mixed mode\n"
+  },
+  "rc": 129
+}

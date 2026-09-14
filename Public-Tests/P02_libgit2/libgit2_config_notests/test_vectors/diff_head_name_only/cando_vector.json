@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "HEAD",
+    "--name-only"
+  ],
+  "stdout": {
+    "pattern": "tracked.txt\n"
+  }
+}

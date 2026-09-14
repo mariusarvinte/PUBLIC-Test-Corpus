@@ -1,0 +1,20 @@
+{
+       "configurable_variables": {
+              "USE_COMPRESSION": [
+                     "zlib",
+                     "builtin"
+              ],
+              "USE_NSEC": [
+                     true,
+                     false
+              ],
+              "EXPERIMENTAL_SHA256": [
+                     true,
+                     false
+              ],
+              "DEPRECATE_HARD": [
+                     true,
+                     false
+              ]
+       }
+}

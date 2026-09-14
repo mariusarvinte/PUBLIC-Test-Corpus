@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "config",
+    "--local",
+    "--list",
+    "--show-scope"
+  ],
+  "stdout": {
+    "pattern": "local\tcore.repositoryformatversion=0\nlocal\tcore.filemode=true\nlocal\tcore.bare=false\nlocal\tcore.logallrefupdates=true\nlocal\tcore.editor=nano\nlocal\tgc.auto=0\nlocal\tmaintenance.auto=false\nlocal\tuser.name=Ada\n"
+  }
+}

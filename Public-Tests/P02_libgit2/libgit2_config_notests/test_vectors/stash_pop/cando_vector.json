@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "stash",
+    "pop"
+  ],
+  "env": {
+    "FAKETIME": "2024-12-14 04:05:06",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Dropped refs/stash@{0}\n"
+  }
+}

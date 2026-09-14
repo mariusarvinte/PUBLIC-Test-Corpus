@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "config",
+    "--local",
+    "--get",
+    "-z",
+    "user.name"
+  ],
+  "stdout": {
+    "pattern": "Ada\u0000"
+  }
+}

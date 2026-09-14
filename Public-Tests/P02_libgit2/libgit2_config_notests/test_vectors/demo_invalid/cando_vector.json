@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "demo"
+  ],
+  "stdout": {
+    "pattern": "*********************************************\n* libgit2 Demonstration\n* Repository: /tmp/runtime/repo/.git/\n*********************************************\n\n*Hex to Raw*\n\n*Raw to Hex*\nSHA hex string: 4a202b346bb0fb0db7eff3cffeb3c70babbd2045\n\n*Raw Object Read*\n\n*Commit Writing*\n\n*Commit Parsing*\n\n*Tag Parsing*\n\n*Tree Parsing*\n\n*Blob Parsing*\n\n*Revwalking*\n\n*Index Walking*\npath: file.txt\nmtime: 1706933106\nfs: 5\n\n*Reference Listing*\nrefs/heads/main [b6ebfe47444f8e9e06d4054ec0125192e2566c40]\n\n*Config Listing*\nEmail: invalid@example.test\nAutocorrect: Undefined\nEmail: invalid@example.test\n\n*********************************************\n* Demonstration completed successfully!\n*********************************************\n"
+  },
+  "stderr": {
+    "pattern": "git2: object not found - no match for id (4a202b346bb0fb0db7eff3cffeb3c70babbd2045)\ngit2: object not found - no match for id (f60079018b664e4e79329a7ef9559c8d9e0378d1)\ngit2: object not found - no match for id (8496071c1b46c854b31185ea97743be6a8774479)\ngit2: object not found - no match for id (b25fa35b38051e4ae45d4222e795f9df2e43f1d1)\ngit2: object not found - no match for id (f60079018b664e4e79329a7ef9559c8d9e0378d1)\ngit2: object not found - no match for id (1385f264afb75a56a5bec74243be9b367ba4ca08)\ngit2: object not found - no match for id (5b5b025afb0b4c913b4c338a42934a3863bf3644)\n"
+  }
+}

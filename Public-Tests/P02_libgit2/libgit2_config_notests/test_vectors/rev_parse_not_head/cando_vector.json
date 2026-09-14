@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "rev-parse",
+    "--not",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "^5625b4287d311da5462c9bcee50df08ddf8fdc80\n"
+  }
+}

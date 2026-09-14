@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "remote",
+    "show"
+  ],
+  "stdout": {
+    "pattern": "backup\norigin\n"
+  }
+}

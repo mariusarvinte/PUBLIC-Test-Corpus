@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_merge_sort_lib_runner"
+name = "_merge_sort_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

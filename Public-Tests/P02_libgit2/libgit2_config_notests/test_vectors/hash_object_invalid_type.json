@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "hash-object",
+    "-t",
+    "nope",
+    "sample.txt"
+  ],
+  "stderr": {
+    "pattern": "git2: invalid object type 'nope'\n"
+  },
+  "rc": 129
+}

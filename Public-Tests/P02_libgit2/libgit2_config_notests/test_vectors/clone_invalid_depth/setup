@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf /tmp/clone_invalid_depth_source
+git init -b main /tmp/clone_invalid_depth_source >/dev/null 2>&1
+
+printf '%s\n' 'depth' > /tmp/clone_invalid_depth_source/readme.txt
+git -C /tmp/clone_invalid_depth_source add readme.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Iris Brook' \
+GIT_AUTHOR_EMAIL='iris@brook.info' \
+GIT_COMMITTER_NAME='Iris Brook' \
+GIT_COMMITTER_EMAIL='iris@brook.info' \
+GIT_AUTHOR_DATE='2020-03-04T05:06:07Z' \
+GIT_COMMITTER_DATE='2020-03-04T05:06:07Z' \
+	git -C /tmp/clone_invalid_depth_source commit -m init --no-gpg-sign >/dev/null 2>&1

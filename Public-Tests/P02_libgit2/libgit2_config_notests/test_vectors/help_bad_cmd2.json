@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "bla",
+    "fjasdfk;ljasdf"
+  ],
+  "stderr": {
+    "pattern": "git2: 'bla' is not a git2 command. See 'git2 help'.\n"
+  },
+  "rc": 1
+}

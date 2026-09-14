@@ -1,0 +1,21 @@
+{
+  "lib_state_in": {
+    "operation": "chmod",
+    "file_name": "test_file.txt",
+    "file_content": null,
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "lib_state_out": {
+    "operation": "chmod",
+    "file_name": "test_file.txt",
+    "file_content": null,
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "stdout": {
+    "pattern": "Permissions changed successfully\n"
+  }
+}

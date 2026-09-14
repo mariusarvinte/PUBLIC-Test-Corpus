@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+mkdir "${DEFAULT_RUN_DIR}"/directory

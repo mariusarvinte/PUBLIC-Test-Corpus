@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "branch"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 branch [-a] [-r] [-f] [-d <branch>] [<branch>] [<start-point>]\n\nList, create, or delete branches.\n\nOptions:\n    -a, --all\n        list both remote-tracking and local branches\n    -r, --remotes\n        list or delete remote-tracking branches\n    -f, --force\n        force branch creation\n    -d <branch>, --delete=<branch>\n        delete a branch\n    <branch>\n        branch name to create\n    <start-point>\n        commit or reference to branch from\n"
+  }
+}

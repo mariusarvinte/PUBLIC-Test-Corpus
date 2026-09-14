@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "status"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 status [-s] [--long] [--porcelain] [-b] [--ignored]\n                    [--untracked-files=<mode>] [--list-submodules]\n                    [--repeat=<n>] [<pathspec>...]\n\nShow the working tree status.\n\nOptions:\n    -s, --short\n        give the output in the short-format\n    --long\n        give the output in the long-format (default)\n    --porcelain\n        give the output in an easy-to-parse format for scripts\n    -b, --branch\n        show the branch\n    --ignored\n        show ignored files as well\n    --untracked-files=<mode>\n        show untracked files (no, normal, all)\n    --list-submodules\n        list submodules\n    --repeat=<n>\n        repeat status output every n seconds\n    <pathspec>...\n        limit to specific paths\n"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "rebase",
+    "main"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Tess Lane",
+    "GIT_AUTHOR_EMAIL": "tess@example.test",
+    "GIT_COMMITTER_NAME": "Tess Lane",
+    "GIT_COMMITTER_EMAIL": "tess@example.test",
+    "GIT_AUTHOR_DATE": "2024-10-11T01:02:03Z",
+    "GIT_COMMITTER_DATE": "2024-10-11T01:02:03Z",
+    "FAKETIME": "2024-10-11 01:02:03",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stderr": {
+    "pattern": "git2: rebase stopped with conflicts; resolve them and run 'git2 rebase --continue'\n"
+  },
+  "rc": 128
+}

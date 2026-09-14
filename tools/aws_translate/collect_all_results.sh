@@ -18,7 +18,7 @@ OFFSET=0
 ALL_PROJECT_CONFIGS="
     self-host-llm:$((200 + $OFFSET)) \
     llm:$((210 + $OFFSET)) \
-    c$((2 + $OFFSET))rust:220 \
+    c2rust:$((220 + $OFFSET)) \
     aarno:$((300 + $OFFSET)) \
     galois:$((310 + $OFFSET)) \
     harvest:$((320 + $OFFSET)) \

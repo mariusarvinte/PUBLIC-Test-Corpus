@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "push",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 push [<repository>] [<branch>]\n\nUpdate remote refs along with associated objects.\n\nOptions:\n    <repository>\n        The \"remote\" repository that is the source of a fetch or pull operation. Defaults to \"origin\"\n    <branch>\n        The branch to push to the remote repository. Defaults to \"main\"\n"
+  }
+}

@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 harness! {
     state: {
@@ -18,9 +18,9 @@ harness! {
     fn run(&mut self) {
         unsafe {
             (*SYMBOL)(
-                self.hex.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.hex),
                 self.hex_maxlen,
-                self.bin.as_ptr(),
+                util::vec_as_ptr(&self.bin),
                 self.bin_len
             )
         };

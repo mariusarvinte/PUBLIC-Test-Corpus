@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "remote",
+    "set-url",
+    "--",
+    "origin",
+    "ssh://example.com/fetch.git",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: invalid argument to set-url: extra\n"
+  },
+  "rc": 129
+}

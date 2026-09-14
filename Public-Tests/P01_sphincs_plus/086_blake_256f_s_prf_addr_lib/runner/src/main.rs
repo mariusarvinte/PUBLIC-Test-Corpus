@@ -1,3 +1,6 @@
+// © 2026 Massachusetts Institute of Technology
+// MIT License
+
 #![cfg_attr(fuzzing, no_main)]
 
 use cando2::*;

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "cherry-pick",
+    "--continue"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "tester",
+    "GIT_AUTHOR_EMAIL": "test@example.com",
+    "GIT_COMMITTER_NAME": "tester",
+    "GIT_COMMITTER_EMAIL": "test@example.com",
+    "GIT_AUTHOR_DATE": "2005-11-19T08:09:10Z",
+    "GIT_COMMITTER_DATE": "2005-11-19T08:09:10Z",
+    "FAKETIME": "2005-11-19 08:09:10",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "applied f6cf2b6e96d9a94fef23b8c1f40b9ce8442e8d0f\n"
+  }
+}

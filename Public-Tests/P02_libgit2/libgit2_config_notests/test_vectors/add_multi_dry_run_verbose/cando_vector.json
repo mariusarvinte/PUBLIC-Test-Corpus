@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "add",
+    "-n",
+    "-v",
+    "a.txt",
+    "b.txt"
+  ],
+  "stdout": {
+    "pattern": "add 'a.txt'\nadd 'b.txt'\n"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "create_tmp_file",
+    "temp_file.txt"
+  ],
+  "stdout": {
+    "pattern": "Temporary file created\nTemporary file deleted\n"
+  },
+  "rc": 0
+}

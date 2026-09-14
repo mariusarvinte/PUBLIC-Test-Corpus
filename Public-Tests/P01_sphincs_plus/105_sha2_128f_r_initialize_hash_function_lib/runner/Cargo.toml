@@ -1,5 +1,8 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 [package]
-name = "_105_sha2_128f_r_initialize_hash_function_lib_runner"
+name = "_105_sha2_128f_r_initialize_hash_function_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

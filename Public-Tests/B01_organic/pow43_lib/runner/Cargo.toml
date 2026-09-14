@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_pow43_lib_runner"
+name = "_pow43_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

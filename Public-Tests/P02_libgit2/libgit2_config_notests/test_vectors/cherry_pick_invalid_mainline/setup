@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+
+printf '%s\n' 'seed' > "${DEFAULT_RUN_DIR}/repo/f.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add f.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Lior Pike' \
+GIT_AUTHOR_EMAIL='lior.pike@marigold.dev' \
+GIT_COMMITTER_NAME='Lior Pike' \
+GIT_COMMITTER_EMAIL='lior.pike@marigold.dev' \
+GIT_AUTHOR_DATE='2023-06-07T13:22:48Z' \
+GIT_COMMITTER_DATE='2023-06-07T13:22:48Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m seed --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

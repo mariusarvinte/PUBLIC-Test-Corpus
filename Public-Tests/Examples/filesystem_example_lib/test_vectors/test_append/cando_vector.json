@@ -1,0 +1,21 @@
+{
+  "lib_state_in": {
+    "operation": "append",
+    "file_name": "append_test.txt",
+    "file_content": "Appended!",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "lib_state_out": {
+    "operation": "append",
+    "file_name": "append_test.txt",
+    "file_content": "Appended!",
+    "var_name": null,
+    "var_content": null,
+    "rc": 0
+  },
+  "stdout": {
+    "pattern": "Content appended successfully\n"
+  }
+}

@@ -227,7 +227,7 @@ ORIG_PWD=$PWD
 # Run rust runner to validate that translated Rust has correct output
 
 # Set up directories needed by Rust runner
-# NB: extract_and_copy.sh will copy tools/ + deployment/ from repo to current dir
+# NB: extract_and_copy.sh will copy tools/ from repo to current dir
 # Rust outputted [from C] by translator
 TRANSLATOR_RESULTS_DIR=$RESULTS_ROOT_DIR
 
@@ -252,24 +252,7 @@ else
 fi
 
 # Run Rust runner
-./deployment/scripts/github-actions/run_rust.sh --keep-going
 
-echo "================================================================================"
-echo "All results"
-if ! ./deployment/scripts/github-actions/run_rust.sh -x junit.xml --keep-going; then
-    echo "Some tests failed"
-fi
-
-echo "================================================================================"
-echo "B01 results"
-if ! ./deployment/scripts/github-actions/run_rust.sh -x junit-b01.xml -m B01 --keep-going; then
-    echo "Some B01 tests failed"
-fi
-
-echo "================================================================================"
-echo "B02 results"
-if ! ./deployment/scripts/github-actions/run_rust.sh -x junit-b02.xml -m B02 --keep-going; then
-    echo "Some B02 tests failed"
-fi
+nix run path:$REPO_ROOT/tools/test_runner  -- --rust -x junit.xml --keep-going --jobs 4 -l WARNING --test-timeout 1200
 
 # vim:et

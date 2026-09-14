@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "submodule",
+    "status"
+  ],
+  "stdout": {
+    "pattern": "+be3563a testrepo\n"
+  }
+}

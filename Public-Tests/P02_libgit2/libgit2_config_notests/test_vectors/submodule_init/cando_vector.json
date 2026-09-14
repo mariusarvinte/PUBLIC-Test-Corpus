@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "submodule",
+    "init"
+  ],
+  "stdout": {
+    "pattern": "Initialized submodule 'testrepo'\n"
+  }
+}

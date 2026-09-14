@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "add",
+    "origin",
+    "https://example.com/repo.git"
+  ],
+  "stdout": {
+    "pattern": "Added remote 'origin' at 'https://example.com/repo.git'\n"
+  }
+}

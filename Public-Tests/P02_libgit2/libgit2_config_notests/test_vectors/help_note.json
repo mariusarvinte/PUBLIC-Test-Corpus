@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "note"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 note [--ref=<ref>] [-f] <command> [--] [<args>...]\n\nManage notes attached to objects.\n\nSubcommands:\n    add <object> <message>        Add a note to an object\n    show <object>                 Show the note for an object\n    list                          List notes\n    remove <object>               Remove the note for an object\n\nOptions:\n    <command>\n        the subcommand (add, show, list, remove)\n    --ref=<ref>\n        notes reference to use\n    -f, --force\n        overwrite an existing note when adding\n    <args>...\n        arguments for the subcommand\n"
+  }
+}

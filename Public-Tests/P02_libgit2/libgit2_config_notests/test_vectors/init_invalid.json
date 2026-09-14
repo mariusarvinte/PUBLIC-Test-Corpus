@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "init"
+  ],
+  "stderr": {
+    "pattern": "git2: invalid argument: 'given_repo'\n"
+  },
+  "rc": 128
+}

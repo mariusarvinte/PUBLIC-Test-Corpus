@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "clone",
+    "file:///tmp/clone_file_url_source.git"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Avery Pike",
+    "GIT_AUTHOR_EMAIL": "avery@delta.test",
+    "GIT_COMMITTER_NAME": "Avery Pike",
+    "GIT_COMMITTER_EMAIL": "avery@delta.test",
+    "GIT_AUTHOR_DATE": "2023-03-04T05:06:07Z",
+    "GIT_COMMITTER_DATE": "2023-03-04T05:06:07Z",
+    "FAKETIME": "2023-03-04 08:09:10",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "(?s)^Cloning into 'clone_file_url_source\\.git'\\.\\.\\.\n(?:remote: Counting objects.*?[\\r\\n]+)+(?:remote: Compressing objects:.*?[\\r\\n]+)+(?:Receiving objects:.*?[\\r\\n]+)*Receiving objects:.*done\\.[\\r\\n]+(?:Checking out files:.*?[\\r\\n]+)*Checking out files:.*done\\.[\\r\\n]+$",
+    "is_regex": true
+  }
+}

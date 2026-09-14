@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "stash",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 stash [<subcommand>] [--] [<args>...]\n\nStash the changes in a dirty working directory away.\n\nUsage:\n  git2 stash list\n  git2 stash (pop | apply)\n  git2 stash [push]\n\nOptions:\n    <subcommand>\n        the subcommand (list, push, pop, apply)\n    <args>...\n        arguments for the subcommand\n"
+  }
+}

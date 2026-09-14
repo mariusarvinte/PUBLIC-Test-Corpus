@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "reset",
+    "nope"
+  ],
+  "stderr": {
+    "pattern": "git2: revspec 'nope' not found\n"
+  },
+  "rc": 128
+}

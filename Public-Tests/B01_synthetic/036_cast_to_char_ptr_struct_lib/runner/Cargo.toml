@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_036_cast_to_char_ptr_struct_lib_runner"
+name = "_036_cast_to_char_ptr_struct_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

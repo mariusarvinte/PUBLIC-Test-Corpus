@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "mkdir",
+    "test_directory"
+  ],
+  "stdout": {
+    "pattern": "Directory created successfully\n"
+  },
+  "rc": 0
+}

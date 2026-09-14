@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "note",
+    "show",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "existing note\n"
+  }
+}

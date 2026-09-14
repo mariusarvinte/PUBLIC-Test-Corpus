@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "set-url",
+    "origin",
+    "https://example.com/other.git"
+  ],
+  "stdout": {
+    "pattern": "Set fetch URL for remote 'origin' to 'https://example.com/other.git'\n"
+  }
+}

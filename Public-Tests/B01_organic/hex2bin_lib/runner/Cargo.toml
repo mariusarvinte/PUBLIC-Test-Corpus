@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_hex2bin_lib_runner"
+name = "_hex2bin_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

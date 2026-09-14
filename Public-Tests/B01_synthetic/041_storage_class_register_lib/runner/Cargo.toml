@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_041_storage_class_register_lib_runner"
+name = "_041_storage_class_register_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

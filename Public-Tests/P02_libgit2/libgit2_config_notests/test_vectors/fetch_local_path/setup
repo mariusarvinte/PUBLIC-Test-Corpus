@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/local" "${DEFAULT_RUN_DIR}/remote"
+tar --no-same-owner -C "${DEFAULT_RUN_DIR}" -xzf "${TEST_RESOURCES}/repos.tar.gz"
+mv "${DEFAULT_RUN_DIR}/local/.gitted" "${DEFAULT_RUN_DIR}/local/.git"
+mv "${DEFAULT_RUN_DIR}/remote/.gitted" "${DEFAULT_RUN_DIR}/remote/.git"
+printf '%s\n' "${DEFAULT_RUN_DIR}/local" > "${WORKING_DIR_FILE}"

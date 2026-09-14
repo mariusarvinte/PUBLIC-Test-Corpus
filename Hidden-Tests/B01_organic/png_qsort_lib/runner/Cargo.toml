@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_png_qsort_lib_runner"
+name = "_png_qsort_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -28,7 +28,6 @@ will
         ../Test-Corpus/Public-Tests/B01_synthetic/024_struct_and_static_lib/test_vectors/*.json
     * copy/install the Rust runner code from
         ./tools/...
-        ./deployment/...
         ./Cargo.toml
 EOF
   exit 1
@@ -79,16 +78,23 @@ install "$RUNNER_SRC_DIR/tools" "$tar_parent_dir/tools" "tools"
 
 install "$RUNNER_SRC_DIR/Cargo.toml" "$tar_parent_dir/Cargo.toml" "Cargo.toml"
 
-install "$RUNNER_SRC_DIR/deployment" "$tar_parent_dir/deployment" "deploy"
-
+# Track if there are any lib tests
+# Default to removing the runners unless one is detected
+REMOVE_LIB_RUNNERS=1
 
 # NUL-delimited to handle spaces/newlines in paths
+shopt -s lastpipe
 find "$TAR_ROOT" -type f -name '*.tar.gz' -print0 |
 while IFS= read -r -d '' tarfile; do
   parent_dir="$(dirname "$tarfile")"
   fname="$(basename "$tarfile")"
   base="${fname%.tar.gz}"              # strip .tar.gz
   destdir="$parent_dir"                # e.g., parent/foo
+
+  # check if the test is a library test, if it is, set REMOVE_LIB_RUNNERS to 0
+  if [[ "$base" == *"_lib"* ]]; then 
+    REMOVE_LIB_RUNNERS=0
+  fi
 
   # Create target dirs
   mkdir -p "$destdir/translated_rust"
@@ -124,6 +130,12 @@ while IFS= read -r -d '' tarfile; do
     install "$run_src" "$destdir/runner" "test runner"
   fi
 done
+
+echo "[*] Files copied to target tree"
+if ((REMOVE_LIB_RUNNERS == 1)); then
+  echo "[*] No library tests! Removing library test runners from Cargo workspace"
+  sed -i '\|^\(.*\)\*-Tests/\*/\*_lib/runner|d' "$tar_parent_dir/Cargo.toml"
+fi
 
 echo "[✓] Done."
 

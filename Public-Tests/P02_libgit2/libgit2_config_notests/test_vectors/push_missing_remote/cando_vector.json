@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "push",
+    "upstream"
+  ],
+  "stderr": {
+    "pattern": "git2: remote 'upstream' does not exist\n"
+  },
+  "rc": 253
+}

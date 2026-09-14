@@ -1,0 +1,23 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+# The main libgit2 source tree: this CMakeLists.txt identifies platform
+# support and includes the subprojects that make up core libgit2 support.
+
+# Always use xdiff
+#
+# Include child projects
+#
+
+add_subdirectory(libgit2)
+add_subdirectory(util)
+add_subdirectory(cli)
+
+# re-export these to the root so that peer projects (tests, fuzzers,
+# examples) can use them
+set(LIBGIT2_INCLUDES ${LIBGIT2_INCLUDES} PARENT_SCOPE)
+set(LIBGIT2_OBJECTS ${LIBGIT2_OBJECTS} PARENT_SCOPE)
+set(LIBGIT2_DEPENDENCY_INCLUDES ${LIBGIT2_DEPENDENCY_INCLUDES} PARENT_SCOPE)
+set(LIBGIT2_DEPENDENCY_OBJECTS ${LIBGIT2_DEPENDENCY_OBJECTS} PARENT_SCOPE)
+set(LIBGIT2_SYSTEM_INCLUDES ${LIBGIT2_SYSTEM_INCLUDES} PARENT_SCOPE)
+set(LIBGIT2_SYSTEM_LIBS ${LIBGIT2_SYSTEM_LIBS} PARENT_SCOPE)

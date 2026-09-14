@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "cherry-pick",
+    "-m",
+    "nope",
+    "HEAD"
+  ],
+  "stderr": {
+    "pattern": "git2: invalid mainline parent 'nope'\n"
+  },
+  "rc": 129
+}

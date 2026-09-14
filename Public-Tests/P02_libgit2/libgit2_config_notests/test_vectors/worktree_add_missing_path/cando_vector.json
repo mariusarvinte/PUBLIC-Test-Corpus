@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "worktree",
+    "add"
+  ],
+  "stderr": {
+    "pattern": "git2: add requires <path>\n"
+  },
+  "rc": 129
+}

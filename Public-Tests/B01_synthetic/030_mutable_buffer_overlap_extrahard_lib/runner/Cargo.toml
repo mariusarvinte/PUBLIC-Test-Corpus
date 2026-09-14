@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_030_mutable_buffer_overlap_extrahard_lib_runner"
+name = "_030_mutable_buffer_overlap_extrahard_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

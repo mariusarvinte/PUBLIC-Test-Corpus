@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "hash-object",
+    "-w",
+    "write.txt"
+  ],
+  "stdout": {
+    "pattern": "756a0db67d63fc92496a6cd7a95f42ac8b7d4ea5\n"
+  }
+}

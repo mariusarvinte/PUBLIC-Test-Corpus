@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "merge",
+    "--no-commit",
+    "octo1"
+  ],
+  "env": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "core.logAllRefUpdates",
+    "GIT_CONFIG_VALUE_0": "false",
+    "GIT_AUTHOR_NAME": "Mara Quinn",
+    "GIT_AUTHOR_EMAIL": "mara@example.com",
+    "GIT_COMMITTER_NAME": "Mara Quinn",
+    "GIT_COMMITTER_EMAIL": "mara@example.com",
+    "GIT_AUTHOR_DATE": "2024-07-03T07:08:09Z",
+    "GIT_COMMITTER_DATE": "2024-07-03T07:08:09Z",
+    "FAKETIME": "2024-07-03 07:08:09",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  }
+}

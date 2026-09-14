@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "show-index"
+  ],
+  "stdout": {
+    "pattern": "File Path: alpha.txt\n    Stage: 0\n Blob SHA: 4a58007052a65fbc2fc3f910f2855f45a4058e74\nFile Mode: 0100644\nFile Size: 0 bytes\nDev/Inode: 0/0\n  UID/GID: 0/0\n    ctime: 0\n    mtime: 0\n\nFile Path: docs/beta.txt\n    Stage: 0\n Blob SHA: 65b2df87f7df3aeedef04be96703e55ac19c2cfb\nFile Mode: 0100644\nFile Size: 0 bytes\nDev/Inode: 0/0\n  UID/GID: 0/0\n    ctime: 0\n    mtime: 0\n\n"
+  }
+}

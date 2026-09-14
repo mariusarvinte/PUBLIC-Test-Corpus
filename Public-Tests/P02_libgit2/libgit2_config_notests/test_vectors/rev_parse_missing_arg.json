@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rev-parse"
+  ],
+  "stderr": {
+    "pattern": "git2: argument 'revspec' is required.\nusage: git2 rev-parse [--not] [--] <revspec>...\n"
+  },
+  "rc": 129
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "log",
+    "-p",
+    "--max-count=1"
+  ],
+  "stdout": {
+    "pattern": "commit d41c72466b5184aa04f313163181769ddf498c8d\nAuthor: Ava North <ava@north.dev>\nDate:   Fri Jan 12 12:00:00 2024 +0000\n\n    add note file\n\ndiff --git a/notes.txt b/notes.txt\nnew file mode 100644\nindex 0000000..519dd58\n--- /dev/null\n+++ b/notes.txt\n@@ -0,0 +1 @@\n+note\n"
+  }
+}

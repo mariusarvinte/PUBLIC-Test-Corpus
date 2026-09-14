@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 cmake_minimum_required(VERSION 3.19)
 project(ci_wrapper)
 

@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 #include "context.h"
+#include "fors.h"
 #include "params.h"
 #include "wotsx1.h"
 
@@ -25,5 +26,5 @@ void wots_treehashx1(unsigned char *root, unsigned char *auth_path,
 void fors_treehashx1(unsigned char *root, unsigned char *auth_path,
 		     const spx_ctx* ctx,
 		     uint32_t leaf_idx, uint32_t idx_offset, uint32_t tree_height,
-		     uint32_t tree_addrx4[8], leaf_info_x1 *info);
+		     uint32_t tree_addrx4[8], fors_gen_leaf_info *info);
 #endif

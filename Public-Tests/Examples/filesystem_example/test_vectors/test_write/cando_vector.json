@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "write",
+    "test_output.txt",
+    "Hello World"
+  ],
+  "stdout": {
+    "pattern": "File written successfully\n"
+  },
+  "rc": 0
+}

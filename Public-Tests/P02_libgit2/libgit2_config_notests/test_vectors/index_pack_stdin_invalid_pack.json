@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "index-pack",
+    "--stdin"
+  ],
+  "stdin": "not a packfile\n",
+  "stderr": {
+    "pattern": "git2: wrong pack signature\n"
+  },
+  "rc": 128
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "demo",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 demo\n\nDemonstrate libgit2 functionality.\n\nThis command runs through various libgit2 API demonstrations including:\n  - OID (SHA) parsing and formatting\n  - Object database operations\n  - Commit writing and parsing\n  - Tag, tree, and blob parsing\n  - Revision walking\n  - Index file manipulation\n  - Reference listing\n  - Configuration file access\n\n"
+  }
+}

@@ -1,0 +1,80 @@
+# =============================================================================
+# Falco Configuration
+# Tracks all file content & metadata changes made by 'driver' or descendants.
+# Output is written to a dedicated log file.
+# =============================================================================
+
+buffered_outputs: false
+
+engine:
+  # -- The kind of engine to use.
+  kind: modern_ebpf
+  # -- Engine-specific configuration for Kernel Module (kmod) engine.
+  kmod:
+    buf_size_preset: 4
+    drop_failed_exit: false
+  # -- Engine-specific configuration for Modern eBPF (modern_ebpf) engine.
+  modern_ebpf:
+    cpus_for_each_buffer: 2
+    buf_size_preset: 4
+    drop_failed_exit: false
+  # -- Engine-specific configuration for replay engine which replays a capture file.
+  replay:
+    # -- Path to the capture file to replay (eg: /path/to/file.scap)
+    capture_file: ""
+
+# ---------------------------------------------------------------------------
+# Output: log matched events to a file
+# ---------------------------------------------------------------------------
+file_output:
+  enabled: true
+  keep_alive: false          # re-open the file on each write (safe default)
+  filename: /var/log/falco/file_changes.log
+
+# Disable other outputs to keep things focused (enable as needed)
+stdout_output:
+  enabled: false
+
+syslog_output:
+  enabled: false
+
+program_output:
+  enabled: false
+
+plugins:
+  - name: container
+    library_path: libcontainer.so
+    init_config:
+      # Optional: specific configurations for container engines
+      engines:
+        docker:
+          sockets: ["/host/var/run/docker.sock"]
+          enabled: true
+        containerd:
+          sockets: ["/run/containerd/containerd.sock"]
+          enabled: false
+        bpm:
+          enabled: false
+        cri: 
+          enabled: false
+        lxc: 
+          enabled: false
+        libvirt_lxc:
+          enabled: false
+        podman:
+          enabled: false
+
+load_plugins: [container]
+
+# ---------------------------------------------------------------------------
+# Log format – JSON makes the log easy to parse downstream
+# ---------------------------------------------------------------------------
+json_output: true
+json_include_output_property: true
+json_include_tags_property: true
+
+# ---------------------------------------------------------------------------
+# Falco rules
+# ---------------------------------------------------------------------------
+rules_file:
+  - /etc/falco/falco_rules.yaml

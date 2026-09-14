@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "init",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 init [-q] [--bare] [-b <name>] [--separate-git-dir=<git-dir>]\n                  [--template=<template-dir>] [--] [<directory>]\n\nCreate a new git repository.\n\nOptions:\n    -q, --quiet\n        quiet mode; don't display informational messages\n    --bare\n        don't create a working directory\n    -b <name>, --initial-branch=<name>\n        initial branch name\n    --separate-git-dir=<git-dir>\n        path to separate git directory\n    --template=<template-dir>\n        path to git directory templates\n    <directory>\n        directory to create repository in\n"
+  }
+}

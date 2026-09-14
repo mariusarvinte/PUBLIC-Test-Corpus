@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "init",
+    "trunk_repo",
+    "--initial-branch=trunk"
+  ],
+  "stdout": {
+    "pattern": "Initialized empty Git repository in .*/trunk_repo/.git/\n",
+    "is_regex": true
+  }
+}

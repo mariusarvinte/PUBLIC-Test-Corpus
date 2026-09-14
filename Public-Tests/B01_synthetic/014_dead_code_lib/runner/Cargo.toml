@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_014_dead_code_lib_runner"
+name = "_014_dead_code_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "cherry-pick",
+    "topic"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "tester",
+    "GIT_AUTHOR_EMAIL": "test@example.com",
+    "GIT_COMMITTER_NAME": "tester",
+    "GIT_COMMITTER_EMAIL": "test@example.com",
+    "GIT_AUTHOR_DATE": "2013-08-21T14:15:16Z",
+    "GIT_COMMITTER_DATE": "2013-08-21T14:15:16Z",
+    "FAKETIME": "2013-08-21 14:15:16",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stderr": {
+    "pattern": "git2: cherry-pick stopped with conflicts; resolve them and run 'git2 cherry-pick --continue'\nconflict: a:f.txt o:f.txt t:f.txt\n"
+  },
+  "rc": 128
+}

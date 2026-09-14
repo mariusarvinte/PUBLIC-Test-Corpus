@@ -1,5 +1,8 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 [package]
-name = "_091_blake_256f_r_gen_message_random_lib_runner"
+name = "_091_blake_256f_r_gen_message_random_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

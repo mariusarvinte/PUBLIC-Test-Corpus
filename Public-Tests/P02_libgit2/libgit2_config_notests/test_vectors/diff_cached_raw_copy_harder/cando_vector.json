@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "diff",
+    "--cached",
+    "--raw",
+    "-C",
+    "--find-copies-harder"
+  ],
+  "stdout": {
+    "pattern": ":000000 100644 0000000... df967b9... A\tcopied.txt\n"
+  }
+}

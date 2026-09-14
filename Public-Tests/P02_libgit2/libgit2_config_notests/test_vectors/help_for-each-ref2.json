@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "for-each-ref",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 for-each-ref\n\nOutput information on each ref.\n\nOptions:\n(null)"
+  }
+}

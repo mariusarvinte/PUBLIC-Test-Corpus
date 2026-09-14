@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "config",
+    "--local",
+    "--add",
+    "core.editor",
+    "vim"
+  ]
+}

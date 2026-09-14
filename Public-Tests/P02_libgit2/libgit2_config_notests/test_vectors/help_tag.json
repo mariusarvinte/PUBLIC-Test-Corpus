@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "tag"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 tag [-a] [-f] [-m <message>] [-l <pattern>] [-d <tagname>]\n                 [-n <n>] [--] [<args>...]\n\nCreate, list, or delete tags.\n\nOptions:\n    -a, --annotate\n        create an annotated tag\n    -f, --force\n        replace existing tag\n    -m <message>, --message=<message>\n        tag message\n    -l <pattern>, --list=<pattern>\n        list tags matching pattern\n    -d <tagname>, --delete=<tagname>\n        delete a tag\n    -n <n>\n        print n lines of tag message\n    <args>...\n        tag name and optional target\n"
+  }
+}

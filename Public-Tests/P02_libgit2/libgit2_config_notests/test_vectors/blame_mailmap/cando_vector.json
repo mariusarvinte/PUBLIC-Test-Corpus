@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "blame",
+    "file.txt"
+  ],
+  "stdout": {
+    "pattern": "^2a9067e (Tester 2024-05-01 00:00:00 +0000 1) line1\n64c1b91e (Tester 2024-05-02 00:00:00 +0000 2) line2-changed\n"
+  }
+}

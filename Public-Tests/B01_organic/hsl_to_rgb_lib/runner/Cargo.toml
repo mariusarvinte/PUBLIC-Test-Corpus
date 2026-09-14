@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_hsl_to_rgb_lib_runner"
+name = "_hsl_to_rgb_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

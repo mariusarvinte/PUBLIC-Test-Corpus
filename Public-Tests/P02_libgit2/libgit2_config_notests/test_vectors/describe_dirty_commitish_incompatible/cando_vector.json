@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "describe",
+    "--dirty=changed",
+    "HEAD"
+  ],
+  "stderr": {
+    "pattern": "git2: --dirty is incompatible with commit-ish\n"
+  },
+  "rc": 129
+}

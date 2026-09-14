@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "note",
+    "add",
+    "HEAD",
+    "fresh note"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Ari Bloom",
+    "GIT_AUTHOR_EMAIL": "ari@bloom.dev",
+    "GIT_COMMITTER_NAME": "Ari Bloom",
+    "GIT_COMMITTER_EMAIL": "ari@bloom.dev",
+    "GIT_AUTHOR_DATE": "2024-03-03T00:00:00Z",
+    "GIT_COMMITTER_DATE": "2024-03-03T00:00:00Z",
+    "FAKETIME": "2024-03-03 10:11:12",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Added note for 'HEAD'\n"
+  }
+}

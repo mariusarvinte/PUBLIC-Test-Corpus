@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "tag",
+    "-l",
+    "ann*"
+  ],
+  "stdout": {
+    "pattern": "ann             \n"
+  }
+}

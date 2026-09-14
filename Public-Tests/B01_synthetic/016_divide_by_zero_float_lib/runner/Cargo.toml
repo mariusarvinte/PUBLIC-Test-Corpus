@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_016_divide_by_zero_float_lib_runner"
+name = "_016_divide_by_zero_float_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

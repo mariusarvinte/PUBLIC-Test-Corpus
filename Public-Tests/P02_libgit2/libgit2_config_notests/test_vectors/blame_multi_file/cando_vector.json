@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "blame",
+    "--line-porcelain",
+    "file2.txt"
+  ],
+  "rc": 0,
+  "stdout": {
+    "pattern": "208e3c85472063c623240d568806e2c7d8e3023f 1 1 1\nauthor Mallory\nauthor-mail <mallory@lambda.org>\nauthor-time 1704931200\nauthor-tz +0000\ncommitter Mallory\ncommitter-mail <mallory@lambda.org>\ncommitter-time 1704931200\ncommitter-tz +0000\nsummary c10\nfilename file2.txt\n\tB7\n"
+  }
+}

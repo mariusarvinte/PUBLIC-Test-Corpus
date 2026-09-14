@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf /tmp/clone_destination_exists_source /tmp/clone_destination_exists_target
+git init -b main /tmp/clone_destination_exists_source >/dev/null 2>&1
+
+printf '%s\n' 'occupied' > /tmp/clone_destination_exists_source/readme.txt
+git -C /tmp/clone_destination_exists_source add readme.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Cleo Marsh' \
+GIT_AUTHOR_EMAIL='cleo@quartz.io' \
+GIT_COMMITTER_NAME='Cleo Marsh' \
+GIT_COMMITTER_EMAIL='cleo@quartz.io' \
+GIT_AUTHOR_DATE='2025-11-12T13:14:15Z' \
+GIT_COMMITTER_DATE='2025-11-12T13:14:15Z' \
+	git -C /tmp/clone_destination_exists_source commit -m init --no-gpg-sign >/dev/null 2>&1
+
+mkdir -p /tmp/clone_destination_exists_target
+printf '%s\n' 'taken' > /tmp/clone_destination_exists_target/file.txt

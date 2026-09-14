@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "worktree",
+    "add",
+    "--",
+    "../other",
+    "topic"
+  ],
+  "stderr": {
+    "pattern": "git2: reference refs/heads/topic is already checked out\n"
+  },
+  "rc": 128
+}

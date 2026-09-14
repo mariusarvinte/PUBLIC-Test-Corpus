@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "rebase",
+    "--continue"
+  ],
+  "stderr": {
+    "pattern": "git2: there is no rebase in progress\n"
+  },
+  "rc": 128
+}

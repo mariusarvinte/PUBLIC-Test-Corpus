@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "remote"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 remote <command> [--] [<args>...]\n\nManage remotes.\n\nSubcommands:\n    add <name> <url>              Add a new remote\n    remove <name>                 Remove a remote\n    rename <old> <new>            Rename a remote\n    set-url [--push] <name> <url> Set remote URL\n    show [-v|--verbose]           Show remotes\n\nOptions:\n    <command>\n        the subcommand (add, remove, rename, set-url, show)\n    <args>...\n        arguments for the subcommand\n"
+  }
+}

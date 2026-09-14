@@ -1,0 +1,13 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+[package]
+name = "driver"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "driver"
+path = "src/main.rs"
+
+[workspace]

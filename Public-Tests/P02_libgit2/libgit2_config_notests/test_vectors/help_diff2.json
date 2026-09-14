@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "diff",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 diff [-p] [--cached] [--stat] [--numstat] [--shortstat]\n                  [--summary] [--name-only] [--name-status] [--raw] [--color]\n                  [--no-color] [--[no-]renames] [--[no-]copies]\n                  [--find-copies-harder] [<tree-ish>] [<tree-ish>] [--]\n                  [<paths>...]\n\nShow changes between commits, commit and working tree, etc.\n\nOptions:\n    -p, --patch\n        generate patch\n    --cached\n        show diff of index\n    --stat\n        generate diffstat\n    --numstat\n        generate numeric diffstat\n    --shortstat\n        generate short diffstat\n    --summary\n        generate summary\n    --name-only\n        show only names of changed files\n    --name-status\n        show names and status of changed files\n    --raw\n        generate diff in raw format\n    --color\n        use color output\n    --no-color\n        do not use color output\n    --[no-]renames\n        detect renames\n    --[no-]copies\n        detect copies\n    --find-copies-harder\n        find copies harder\n    <tree-ish>\n        first tree-ish to compare\n    <tree-ish>\n        second tree-ish to compare\n    <paths>...\n        limit diff to specific paths\n"
+  }
+}

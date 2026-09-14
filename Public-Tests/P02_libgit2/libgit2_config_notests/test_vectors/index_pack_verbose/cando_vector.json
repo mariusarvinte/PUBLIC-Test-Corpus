@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "index-pack",
+    "-v",
+    "sample.pack"
+  ],
+  "stdout": {
+    "pattern": "Indexing objects:   0% (0/3)\rIndexing objects: 100% (3/3), done.\r\n"
+  }
+}

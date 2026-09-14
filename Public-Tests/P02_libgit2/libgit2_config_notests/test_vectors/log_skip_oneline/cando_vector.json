@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "log",
+    "--oneline",
+    "--skip=1"
+  ],
+  "stdout": {
+    "pattern": "1481bbb0efe0edfc530989f2c29e908665f5647c expand story\nd3f4e2b59d54354f132c48dcb4df5157c1b3dc41 init story\n"
+  }
+}

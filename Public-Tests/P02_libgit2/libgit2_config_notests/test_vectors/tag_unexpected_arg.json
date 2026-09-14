@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "tag",
+    "--bogus"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: --bogus\nusage: git2 tag [-a] [-f] [-m <message>] [-l <pattern>] [-d <tagname>]\n                 [-n <n>] [--] [<args>...]\n"
+  },
+  "rc": 129
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "log",
+    "--committer=Mia"
+  ],
+  "stdout": {
+    "pattern": "commit 1481bbb0efe0edfc530989f2c29e908665f5647c\nAuthor: Beck Stone <beck@stone.io>\nDate:   Thu Jan 11 11:00:00 2024 +0000\n\n    expand story\n\ncommit d3f4e2b59d54354f132c48dcb4df5157c1b3dc41\nAuthor: Ava North <ava@north.dev>\nDate:   Wed Jan 10 10:00:00 2024 +0000\n\n    init story\n\n"
+  }
+}

@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+i=1
+ts=1720000000
+while [ "$i" -le 540 ]; do
+  case $((i % 6)) in
+    0) name='Ari Bloom'; email='ari@bloom.dev' ;;
+    1) name='Bela Cross'; email='bela@cross.net' ;;
+    2) name='Cato Ember'; email='cato@ember.org' ;;
+    3) name='Dina Frost'; email='dina@frost.app' ;;
+    4) name='Eli Grove'; email='eli@grove.io' ;;
+    5) name='Faye Holt'; email='faye@holt.dev' ;;
+  esac
+
+  printf 'entry %03d\n' "$i" > "${DEFAULT_RUN_DIR}/repo/history.txt"
+  if [ $((i % 9)) -eq 0 ]; then
+    printf 'special %03d\n' "$i" > "${DEFAULT_RUN_DIR}/repo/history.txt"
+  fi
+
+  git -C "${DEFAULT_RUN_DIR}/repo" add history.txt >/dev/null 2>&1
+  GIT_AUTHOR_NAME="$name" \
+  GIT_AUTHOR_EMAIL="$email" \
+  GIT_COMMITTER_NAME="$name" \
+  GIT_COMMITTER_EMAIL="$email" \
+  GIT_AUTHOR_DATE="${ts} +0000" \
+  GIT_COMMITTER_DATE="${ts} +0000" \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m "step-$i" --no-gpg-sign >/dev/null 2>&1
+
+  i=$((i + 1))
+  ts=$((ts + 60))
+done
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

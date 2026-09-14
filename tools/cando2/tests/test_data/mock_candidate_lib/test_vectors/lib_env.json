@@ -1,0 +1,19 @@
+{
+  "lib_state_in": {
+    "a": 6,
+    "b": 5,
+    "returns": 0
+  },
+  "lib_state_out": {
+    "a": 6,
+    "b": 5,
+    "returns": 11
+  },
+  "env": {
+    "CANDO_TEST_VECTOR_ENV": "from test vector"
+  },
+  "stdout": {
+    "pattern": "(?m)^.*from test vector\\n$",
+    "is_regex": true
+  }
+}

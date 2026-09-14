@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "add"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 add [-n] [-v] [-u] <file-spec>...\n\nAdd file contents to the index.\n\nOptions:\n    <file-spec>...\n        the file (or files) to add to index\n    -n, --dry-run\n        don’t actually add the file(s), just show if they exist and/or will be ignored\n    -v, --verbose\n        be verbose\n    -u, --update\n        update tracked files\n"
+  }
+}

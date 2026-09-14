@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "checkout"
+  ],
+  "stderr": {
+    "pattern": "git2: argument 'branch' is required.\nusage: git2 checkout [-f] [--[no-]progress] [-p] <branch>\n"
+  },
+  "rc": 129
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "rebase",
+    "--onto",
+    "master",
+    "gravy",
+    "deep_gravy"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Rhea Moss",
+    "GIT_AUTHOR_EMAIL": "rhea@example.test",
+    "GIT_COMMITTER_NAME": "Rhea Moss",
+    "GIT_COMMITTER_EMAIL": "rhea@example.test",
+    "GIT_AUTHOR_DATE": "2024-09-04T04:05:06Z",
+    "GIT_COMMITTER_DATE": "2024-09-04T04:05:06Z",
+    "FAKETIME": "2024-09-04 04:05:06",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "applied 825401ff43a712c3372e8436a0ad400af35ad5f7\nSuccessfully rebased deep_gravy\n"
+  }
+}

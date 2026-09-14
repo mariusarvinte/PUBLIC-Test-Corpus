@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "blame",
+    "/tmp/runtime/outside.txt"
+  ],
+  "rc": 128,
+  "stdout": {
+    "pattern": ""
+  },
+  "stderr": {
+    "pattern": "git2: the path '..' does not exist in the given tree\n"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "init",
+    "worktree",
+    "--separate-git-dir",
+    "repo.git"
+  ],
+  "stdout": {
+    "pattern": "Initialized empty Git repository in /tmp/runtime/repo.git/\n"
+  }
+}

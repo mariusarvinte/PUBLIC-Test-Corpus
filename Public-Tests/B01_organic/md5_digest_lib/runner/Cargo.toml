@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_md5_digest_lib_runner"
+name = "_md5_digest_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

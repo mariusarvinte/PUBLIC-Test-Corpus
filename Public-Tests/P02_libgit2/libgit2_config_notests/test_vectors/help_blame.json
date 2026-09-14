@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "blame"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 blame [-p] [--line-porcelain] [--] <file>\n\nShow the origin of each line of a file.\n\nOptions:\n    <file>\n        file to blame\n    -p, --porcelain\n        show machine readable output\n    --line-porcelain\n        show individual lines in machine readable output\n"
+  }
+}

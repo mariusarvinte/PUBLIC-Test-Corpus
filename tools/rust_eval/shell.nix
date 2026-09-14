@@ -8,6 +8,10 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     python313
     python313Packages.xmltodict
+    openssl
+    pkg-config
+    pcre2
+    zlib
   ];
 
   shellHook = ''

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "rebase",
+    "--continue"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Tess Lane",
+    "GIT_AUTHOR_EMAIL": "tess@example.test",
+    "GIT_COMMITTER_NAME": "Tess Lane",
+    "GIT_COMMITTER_EMAIL": "tess@example.test",
+    "GIT_AUTHOR_DATE": "2024-10-12T02:03:04Z",
+    "GIT_COMMITTER_DATE": "2024-10-12T02:03:04Z",
+    "FAKETIME": "2024-10-12 02:03:04",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "applied d8b296648e9d9bc6cdb88035293c5cdb0591b5cc\nSuccessfully rebased current branch\n"
+  }
+}

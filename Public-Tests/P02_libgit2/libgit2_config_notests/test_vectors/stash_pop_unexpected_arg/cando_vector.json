@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "stash",
+    "pop",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: pop does not accept any parameters\n"
+  },
+  "rc": 129
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "stash",
+    "list",
+    "extra"
+  ],
+  "stderr": {
+    "pattern": "git2: list does not accept any parameters\n"
+  },
+  "rc": 129
+}

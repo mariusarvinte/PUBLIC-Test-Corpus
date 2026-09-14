@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_013_poor_quality_addition_lib_runner"
+name = "_013_poor_quality_addition_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

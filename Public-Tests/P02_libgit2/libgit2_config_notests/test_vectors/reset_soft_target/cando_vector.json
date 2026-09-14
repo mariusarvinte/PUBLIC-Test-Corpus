@@ -1,0 +1,7 @@
+{
+  "argv": [
+    "reset",
+    "--soft",
+    "HEAD~1"
+  ]
+}

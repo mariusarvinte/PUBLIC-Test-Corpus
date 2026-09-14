@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "HEAD~1",
+    "HEAD"
+  ],
+  "stdout": {
+    "pattern": "diff --git a/file.txt b/file.txt\nindex d44e18f..45f1e03 100644\n--- a/file.txt\n+++ b/file.txt\n@@ -1 +1,2 @@\n start\n+more\n"
+  }
+}

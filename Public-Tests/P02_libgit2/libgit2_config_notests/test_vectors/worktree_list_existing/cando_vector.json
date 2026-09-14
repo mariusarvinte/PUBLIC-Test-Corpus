@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "worktree",
+    "list"
+  ],
+  "stdout": {
+    "pattern": "wt2 /tmp/runtime/wt2 [locked: added with --lock\n]\nwt /tmp/runtime/wt\n"
+  }
+}

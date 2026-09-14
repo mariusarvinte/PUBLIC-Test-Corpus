@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_005_static_loop_lib_runner"
+name = "_005_static_loop_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

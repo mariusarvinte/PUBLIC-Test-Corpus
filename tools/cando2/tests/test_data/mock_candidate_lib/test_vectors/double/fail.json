@@ -1,0 +1,16 @@
+{
+  "lib_state_in": {
+    "a": 0.1,
+    "b": 0.2,
+    "returns": 0
+  },
+  "lib_state_out": {
+    "a": 0.1,
+    "b": 0.2,
+    "returns": 0.32
+  },
+  "stdout": {
+    "pattern": "(?m)^.*\n",
+    "is_regex": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "create",
+    "new_file.txt"
+  ],
+  "stdout": {
+    "pattern": "File created successfully\n"
+  }
+}

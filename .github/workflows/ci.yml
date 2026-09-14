@@ -3,7 +3,7 @@
 
 name: Run CI
 # TODO hmak Hard code default in better way
-run-name: Run CI on ${{inputs.test_dir || 'All-Tests'}}
+run-name: Run CI on all C test cases/vector
 
 on:
   # Trigger workflow on Public-Tests on PR changes
@@ -11,11 +11,19 @@ on:
     # on PR merge to main/etc
     branches:
       - main
-      - B02
-      - "releases/**"
+      - "B0*"
+      - "P0*"
+      - "release/**"
     # NB: Following are the default PR events [when "types" is omitted]
     # re: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request
     # types: [opened, synchronize, reopened]
+  # Run CI on major "trunks". This can happen after a PR is merged.
+  push:
+    branches:
+      - main
+      - "B0*"
+      - "P0*"
+      - "release/**"
 
   # Trigger workflow from manual "Run workflow" button
   workflow_dispatch:
@@ -42,6 +50,7 @@ env:
   # TODO hmak Hard code default in better way
   TEST_DIR: ${{inputs.test_dir || 'All-Tests'}}
   TEST_RESULTS_FILE: ${{inputs.test_results_file || 'junit.xml'}}
+  LIBGIT2_RESULTS_FILE: ${{inputs.test_results_file || 'libgit2_junit.xml'}}
 
 # Debounce tests when there are back-to-back commits to the same branch
 # re: https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency
@@ -50,9 +59,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify-c-tests:
+  check-license:
+    name: "Check file license headers"
+    runs-on: [python]
+    steps:
+      - uses: actions/checkout@v4
+      #   with:
+      #       submodules: true
+      #       token: ${{ secrets.GITHUB_TOKEN }}
+      #       # Bletch to personal access token :(
+      #       # re: https://github.com/actions/checkout/issues/2080
+      #       token: ${{secrets.GIT_EXTERNAL_PERSONAL_ACCESS_TOKEN}}
+      # FIXME hmak Make submodule changes [reused workflow](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows)
+      # FIXME hmak Don't use classic Personal Access Token for cross repo submodule access
+      - name: Fetch submodules
+        run: |
+          git submodule init
+          git config --local submodule.Hidden-Tests.url "https://${{vars.GIT_INTERNAL_USER}}:${{secrets.GIT_INTERNAL_PERSONAL_ACCESS_TOKEN}}@llcad-github.llan.ll.mit.edu/TRACTOR/Hidden-Tests.git"
+          git submodule update --depth=1 Hidden-Tests
+          git -C Hidden-Tests clean -ffdx
+
+      - name: Run license checking script
+        run: ./tools/license.py --check .
+
+  verify-c-tests-no-libgit2:
     # TODO hmak Hard code default in better way
-    name: "${{inputs.test_dir || 'All-Tests'}}: Verify test vectors running C code"
+    name: "Verify C test cases/vectors match expected I/O (no libgit2, with ASan)"
     # TODO hmak Provision buildchain tools on-the-fly? (using GitHub action or Docker?)
     runs-on: [python, ninja, cmake, cargo]
     steps:
@@ -67,19 +99,19 @@ jobs:
       # FIXME hmak Don't use classic Personal Access Token for cross repo submodule access
       - name: Fetch submodules
         run: |
-          # git submodule update --init --recursive --depth=1
           git submodule init
           git config --local submodule.Hidden-Tests.url "https://${{vars.GIT_INTERNAL_USER}}:${{secrets.GIT_INTERNAL_PERSONAL_ACCESS_TOKEN}}@llcad-github.llan.ll.mit.edu/TRACTOR/Hidden-Tests.git"
           git submodule update --depth=1 Hidden-Tests
+          git -C Hidden-Tests clean -ffdx
 
-      - name: Run the CI script on ${{env.TEST_DIR}}
+      - name: Run the Nix CI script on ${{env.TEST_DIR}}
         run: |
           RUN_TEST_OPTS=
           if [ "${{env.TEST_DIR}}" != "All-Tests" ]; then
             RUN_TEST_OPTS="--subset ${{env.TEST_DIR}}"
           fi
-          # Always use --verbose so that junit.xml contains more test failure details
-          ./deployment/scripts/github-actions/run_ci.sh $RUN_TEST_OPTS --junit-xml ${{env.TEST_RESULTS_FILE}} ${{inputs.fail_immediately && '' || '--keep-going'}} --verbose
+          nix run ./tools/test_runner -- $RUN_TEST_OPTS --junit-xml ${{env.TEST_RESULTS_FILE}} ${{inputs.fail_immediately && '' || '--keep-going'}} --log-level DEBUG --asan
+
       # Make test results downloadable from workflow
       - name: Upload test results
         uses: actions/upload-artifact@v3
@@ -93,6 +125,43 @@ jobs:
         uses: ./.github/actions/report-junit-results
         with:
           report_path: ${{env.TEST_RESULTS_FILE}}
+      # - name: Report test results
+      #   uses: mikepenz/action-junit-report@v4
+      #   with:
+      #       report_paths: "junit.xml"
+
+  verify-libgit2-tests:
+    # TODO hmak Hard code default in better way
+    name: "Verify C test cases/vectors match expected I/O for P02_libgit2 (without ASan)"
+    # TODO hmak Provision buildchain tools on-the-fly? (using GitHub action or Docker?)
+    runs-on: [python, ninja, cmake, cargo]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch submodules
+        run: |
+          git submodule init
+          git config --local submodule.Hidden-Tests.url "https://${{vars.GIT_INTERNAL_USER}}:${{secrets.GIT_INTERNAL_PERSONAL_ACCESS_TOKEN}}@llcad-github.llan.ll.mit.edu/TRACTOR/Hidden-Tests.git"
+          git submodule update --depth=1 Hidden-Tests
+          git -C Hidden-Tests clean -ffdx
+
+      - name: Run the Nix CI script on P02_libgit2
+        run: |
+          nix run ./tools/test_runner -- $RUN_TEST_OPTS --junit-xml ${{env.LIBGIT2_RESULTS_FILE}} ${{inputs.fail_immediately && '' || '--keep-going'}} --log-level DEBUG --subset Public-Tests/P02_libgit2
+
+      # Make test results downloadable from workflow
+      - name: Upload test results for P02_libgit2
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results-libgit2
+          path: ${{env.LIBGIT2_RESULTS_FILE}}
+        if: ${{! cancelled()}}
+      # FIXME hmak Replace custom action with: mikepenz/action-junit-report@v4
+      # Handle JUnit test failures (i.e., fail the CI)
+      - name: Handle JUnit test failures
+        uses: ./.github/actions/report-junit-results
+        with:
+          report_path: ${{env.LIBGIT2_RESULTS_FILE}}
       # - name: Report test results
       #   uses: mikepenz/action-junit-report@v4
       #   with:

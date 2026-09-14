@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "version",
+    "--build-options"
+  ],
+  "stdout": {
+    "pattern": "git2 version 1.9.0\nsizeof-long: 8\nsizeof-size_t: 8\nbackend-sha1: builtin\nbackend-nsec: mtim\nbackend-compression: builtin\nbackend-regex: pcre2\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "checkout"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 checkout [-f] [--[no-]progress] [-p] <branch>\n\nSwitches branches or restores working tree files.\n\nOptions:\n    <branch>\n        branch to checkout\n    -f, --force\n        force the checkout to happen\n    --[no-]progress\n        show checkout progress, on by default\n    -p, --perf\n        show performance data\n"
+  }
+}

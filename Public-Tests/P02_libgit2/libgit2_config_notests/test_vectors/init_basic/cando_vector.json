@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "init",
+    "new_repo"
+  ],
+  "stdout": {
+    "pattern": "Initialized empty Git repository in /tmp/runtime/new_repo/.git/\n"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "for-each-ref"
+  ],
+  "stdout": {
+    "pattern": "97f10c6791af1235448e2b5c77a9d34dfbefa008 commit\trefs/heads/main\n86a5905906f5d1e2603f400ba5cf30b283ac652c tag   \trefs/tags/v1.0\n"
+  }
+}

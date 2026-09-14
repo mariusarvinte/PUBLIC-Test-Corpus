@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "diff",
+    "--cached",
+    "--name-status"
+  ],
+  "stdout": {
+    "pattern": "M\ta.txt\nM\tb.txt\n"
+  }
+}

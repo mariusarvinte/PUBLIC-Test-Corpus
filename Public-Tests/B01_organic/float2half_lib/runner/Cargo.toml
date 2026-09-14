@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_float2half_lib_runner"
+name = "_float2half_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf /tmp/clone_existing_empty_source /tmp/clone_existing_empty_target
+git init -b main /tmp/clone_existing_empty_source >/dev/null 2>&1
+git -C /tmp/clone_existing_empty_source config gc.auto 0
+git -C /tmp/clone_existing_empty_source config maintenance.auto false
+
+printf '%s\n' 'empty target clone' > /tmp/clone_existing_empty_source/readme.txt
+git -C /tmp/clone_existing_empty_source add readme.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Mira Lane' \
+GIT_AUTHOR_EMAIL='mira@lane.test' \
+GIT_COMMITTER_NAME='Mira Lane' \
+GIT_COMMITTER_EMAIL='mira@lane.test' \
+GIT_AUTHOR_DATE='2024-04-05T06:07:08Z' \
+GIT_COMMITTER_DATE='2024-04-05T06:07:08Z' \
+	git -C /tmp/clone_existing_empty_source commit -m init --no-gpg-sign >/dev/null 2>&1
+
+mkdir -p /tmp/clone_existing_empty_target

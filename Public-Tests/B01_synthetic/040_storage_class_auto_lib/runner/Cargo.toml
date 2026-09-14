@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_040_storage_class_auto_lib_runner"
+name = "_040_storage_class_auto_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

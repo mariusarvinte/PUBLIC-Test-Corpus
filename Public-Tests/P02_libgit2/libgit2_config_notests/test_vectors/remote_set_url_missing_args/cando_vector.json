@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "set-url",
+    "origin"
+  ],
+  "stderr": {
+    "pattern": "git2: set-url requires <name> and <url>\n"
+  },
+  "rc": 129
+}

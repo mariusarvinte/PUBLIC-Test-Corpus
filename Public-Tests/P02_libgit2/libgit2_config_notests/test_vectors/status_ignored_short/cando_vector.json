@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "status",
+    "-s",
+    "--ignored"
+  ],
+  "stdout": {
+    "pattern": "!! debug.log\n"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "cat-file",
+    "-s",
+    "HEAD:file.txt"
+  ],
+  "stdout": {
+    "pattern": "6\n"
+  }
+}

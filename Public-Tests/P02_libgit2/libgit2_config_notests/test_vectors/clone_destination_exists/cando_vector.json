@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "clone",
+    "/tmp/clone_destination_exists_source",
+    "/tmp/clone_destination_exists_target"
+  ],
+  "env": {
+    "FAKETIME": "2024-04-05 06:07:08",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stderr": {
+    "pattern": "fatal: destination path '/tmp/clone_destination_exists_target' already exists and is not an empty directory.\n"
+  },
+  "rc": 128
+}

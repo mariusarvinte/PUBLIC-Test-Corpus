@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+
+printf '%s\n' '*.log' > "${DEFAULT_RUN_DIR}/repo/.gitignore"
+printf '%s\n' 'base' > "${DEFAULT_RUN_DIR}/repo/tracked.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add .gitignore tracked.txt >/dev/null 2>&1
+GIT_AUTHOR_NAME='Nora Vale' \
+GIT_AUTHOR_EMAIL='nora@vale.dev' \
+GIT_COMMITTER_NAME='Nora Vale' \
+GIT_COMMITTER_EMAIL='nora@vale.dev' \
+GIT_AUTHOR_DATE='2024-02-01T09:00:00Z' \
+GIT_COMMITTER_DATE='2024-02-01T09:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m 'seed repo' --no-gpg-sign >/dev/null 2>&1
+
+printf '%s\n' 'base' 'worktree change' > "${DEFAULT_RUN_DIR}/repo/tracked.txt"
+printf '%s\n' 'staged content' > "${DEFAULT_RUN_DIR}/repo/staged.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add staged.txt >/dev/null 2>&1
+printf '%s\n' 'scratch' > "${DEFAULT_RUN_DIR}/repo/untracked.txt"
+printf '%s\n' 'ignored' > "${DEFAULT_RUN_DIR}/repo/debug.log"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

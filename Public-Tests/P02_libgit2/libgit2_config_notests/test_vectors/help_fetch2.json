@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "fetch",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 fetch [<repository>]\n\nDownload objects and refs from another repository.\n\nOptions:\n    <repository>\n        The \"remote\" repository that is the source of a fetch or pull operation. Defaults to \"origin\"\n"
+  }
+}

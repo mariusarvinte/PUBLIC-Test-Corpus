@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rebase",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 rebase [--continue|--abort] [--onto=<newbase>] [<upstream>]\n                    [<branch>]\n\nReapply commits on top of another base tip.\n\nExamples:\n  git2 rebase <upstream>\n  git2 rebase --onto <newbase> <upstream> [<branch>]\n  git2 rebase --continue\n  git2 rebase --abort\n\nOptions:\n    --continue\n        continue an in-progress rebase\n    --abort\n        abort an in-progress rebase\n    --onto=<newbase>\n        rebase onto the given branch or commit\n    <upstream>\n        upstream branch or commit to rebase onto\n    <branch>\n        branch to rebase (defaults to current branch)\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "clone",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 clone [-q] [-n] [--bare] [-b <name>] [--depth=<depth>] [--]\n                   <repository> [<directory>]\n\nClone a repository into a new directory.\n\nOptions:\n    <repository>\n        repository path\n    -q, --quiet\n        display the type of the object\n    -n, --no-checkout\n        don't checkout HEAD\n    --bare\n        don't create a working directory\n    -b <name>, --branch=<name>\n        branch to check out\n    --depth=<depth>\n        commit depth to check out \n    <directory>\n        directory to clone into\n"
+  }
+}

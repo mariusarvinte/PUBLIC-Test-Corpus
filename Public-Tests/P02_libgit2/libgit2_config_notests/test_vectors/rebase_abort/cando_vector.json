@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "rebase",
+    "--abort"
+  ],
+  "stdout": {
+    "pattern": "Rebase aborted\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "delete",
+    "new_file.txt"
+  ],
+  "stdout": {
+    "pattern": "File deleted successfully\n"
+  }
+}

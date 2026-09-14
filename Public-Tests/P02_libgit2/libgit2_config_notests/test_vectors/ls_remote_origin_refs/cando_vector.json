@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "ls-remote",
+    "origin"
+  ],
+  "stdout": {
+    "pattern": "5e40070b3ebb19d33088f9e7999e6b5417f702c8\trefs/heads/main\n5e40070b3ebb19d33088f9e7999e6b5417f702c8\trefs/heads/side\n57ce8593bd340604f4003ab0a06ba193909ce28d\trefs/tags/v1.0\n5e40070b3ebb19d33088f9e7999e6b5417f702c8\trefs/tags/v1.0^{}\n"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "clone",
+    "/tmp/repo"
+  ],
+  "stdout": {
+    "pattern": "Cloning into 'repo'...\n"
+  }
+}

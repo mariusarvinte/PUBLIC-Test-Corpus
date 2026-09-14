@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "cat-file",
+    "-e",
+    "deadbeef"
+  ],
+  "rc": 1
+}

@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 #[repr(C)]
 struct bs_t {
@@ -37,13 +37,13 @@ harness! {
 
     fn run(&mut self) {
         let mut b = bs_t {
-            buf: self.b_buf.as_ptr(),
+            buf: util::vec_as_mut_ptr(&mut self.b_buf),
             pos: self.b_pos,
             limit: self.b_limit,
         };
         self.returns = unsafe {
             (*SYMBOL)(
-                self.grbuf.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.grbuf),
                 &raw mut b as *mut bs_t,
                 &raw mut self.sci as *mut L12_scale_info,
                 self.group_size,

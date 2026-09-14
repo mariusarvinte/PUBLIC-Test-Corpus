@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_gaussian_kernel_lib_runner"
+name = "_gaussian_kernel_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "1"
+  ],
+  "stdin": "Cool!\n",
+  "stdout": {
+    "pattern": "Please enter some text: You entered: Cool!\n"
+  },
+  "stderr": {
+    "pattern": "Printing to stderr\n"
+  }
+}

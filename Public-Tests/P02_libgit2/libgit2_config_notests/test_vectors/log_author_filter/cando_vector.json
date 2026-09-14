@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "log",
+    "--author=Ava"
+  ],
+  "stdout": {
+    "pattern": "commit 5625b4287d311da5462c9bcee50df08ddf8fdc80\nAuthor: Ava North <ava@north.dev>\nDate:   Fri Jan 12 12:00:00 2024 +0000\n\n    add note file\n\ncommit 8b62ae08b37b537235fd370b80e08e3948ab4aa6\nAuthor: Ava North <ava@north.dev>\nDate:   Wed Jan 10 10:00:00 2024 +0000\n\n    init story\n\n"
+  }
+}

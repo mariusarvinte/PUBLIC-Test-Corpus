@@ -1,0 +1,20 @@
+{
+  "lib_state_in": {
+    "a": -1,
+    "b": 5,
+    "returns": 0
+  },
+  "lib_state_out": {
+    "a": -1,
+    "b": 5,
+    "returns": 4
+  },
+  "stdin": "Cool!\n",
+  "stdout": {
+    "pattern": "(?m)^.*Please enter some text: You entered: Cool!\\n$",
+    "is_regex": true
+  },
+  "stderr": {
+    "pattern": "Printing to stderr\n"
+  }
+}

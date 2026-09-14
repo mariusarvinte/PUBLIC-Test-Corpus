@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "-q",
+    "init",
+    "new_repo"
+  ],
+  "stderr": {
+    "pattern": "git2: unknown option: -q\nusage: git2 [--help] [-c <key=value>] [--config-env=<key=value>] [--no-pager]\n             [--version] <command> [<args>...]\n"
+  },
+  "rc": 129
+}

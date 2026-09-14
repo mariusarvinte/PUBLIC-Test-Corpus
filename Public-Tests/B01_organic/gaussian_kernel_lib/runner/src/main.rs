@@ -3,7 +3,7 @@
 
 #![cfg_attr(fuzzing, no_main)]
 
-use cando2::*;
+use cando2::{utils::util, *};
 
 harness! {
     state: {
@@ -18,7 +18,7 @@ harness! {
         self.dest = vec![0.0; self.size as usize];
         unsafe {
             (*SYMBOL)(
-                self.dest.as_mut_ptr(),
+                util::vec_as_mut_ptr(&mut self.dest),
                 self.size,
                 self.radius
             )

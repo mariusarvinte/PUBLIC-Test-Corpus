@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "rev-list"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 rev-list [--topo-order] [--date-order] [--reverse] [--]\n                      <revspec>...\n\nList commits in reverse chronological order.\n\nThis command lists commit objects in reverse chronological order,\nstarting from the given commits. You can specify ranges, exclusions,\nand use --not to toggle including/excluding commits.\n\nRevision specifications:\n  <commit>          - Include commit and its ancestors\n  ^<commit>         - Exclude commit and its ancestors\n  <commit>..<commit> - Range (exclude first, include second)\n  --not <commits>   - Toggle exclusion for following commits\n\nOptions:\n    <revspec>...\n        revision specification(s)\n    --topo-order\n        show commits in topological order\n    --date-order\n        show commits in date order\n    --reverse\n        reverse the commit ordering\n"
+  }
+}

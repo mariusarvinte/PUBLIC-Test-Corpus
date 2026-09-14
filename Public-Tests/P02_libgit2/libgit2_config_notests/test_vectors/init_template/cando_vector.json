@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "init",
+    "templated_repo",
+    "--template",
+    "template"
+  ],
+  "stdout": {
+    "pattern": "Initialized empty Git repository in /tmp/runtime/templated_repo/.git/\n"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "config",
+    "--file",
+    "custom.cfg",
+    "--add",
+    "user.name",
+    "Alice"
+  ]
+}

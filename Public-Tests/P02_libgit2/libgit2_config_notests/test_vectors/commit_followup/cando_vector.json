@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "commit",
+    "-m",
+    "followup"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Iris Quill",
+    "GIT_AUTHOR_EMAIL": "iris@meadow.net",
+    "GIT_COMMITTER_NAME": "Iris Quill",
+    "GIT_COMMITTER_EMAIL": "iris@meadow.net",
+    "GIT_AUTHOR_DATE": "2025-11-12T13:14:15Z",
+    "GIT_COMMITTER_DATE": "2025-11-12T13:14:15Z"
+  }
+}

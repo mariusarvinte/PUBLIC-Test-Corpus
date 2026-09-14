@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "submodule",
+    "status",
+    "testrepo"
+  ],
+  "stdout": {
+    "pattern": "+a65fedf lib/testrepo\n"
+  }
+}

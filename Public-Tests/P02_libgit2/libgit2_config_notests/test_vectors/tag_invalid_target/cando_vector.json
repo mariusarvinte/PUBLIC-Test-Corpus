@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "tag",
+    "nope",
+    "badtarget"
+  ],
+  "stderr": {
+    "pattern": "git2: revspec 'badtarget' not found\n"
+  },
+  "rc": 128
+}

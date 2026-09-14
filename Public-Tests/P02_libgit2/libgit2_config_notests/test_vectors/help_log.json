@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "help",
+    "log"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 log [-p] [--oneline] [--log-size] [--skip=<n>] [--max-count=<n>]\n                 [--author=<pattern>] [--committer=<pattern>]\n                 [--grep=<pattern>] [--merges] [--no-merges] [--date-order]\n                 [--topo-order] [--reverse] [<revisions>...] [--] [<paths>...]\n\nShow commit logs.\n\nOptions:\n    -p, --patch\n        generate patch\n    --oneline\n        show commits on one line\n    --log-size\n        show log message size\n    --skip=<n>\n        skip n commits\n    --max-count=<n>\n        limit to n commits\n    --author=<pattern>\n        filter by author\n    --committer=<pattern>\n        filter by committer\n    --grep=<pattern>\n        filter by commit message\n    --merges\n        show only merge commits\n    --no-merges\n        show only non-merge commits\n    --date-order\n        sort by date\n    --topo-order\n        sort topologically\n    --reverse\n        reverse order\n    <revisions>...\n        starting revisions\n    <paths>...\n        limit to specific paths\n"
+  }
+}

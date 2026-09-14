@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "stash",
+    "list"
+  ],
+  "stdout": {
+    "pattern": "stash@{0}: WIP on main: cb02d42 base\n"
+  }
+}

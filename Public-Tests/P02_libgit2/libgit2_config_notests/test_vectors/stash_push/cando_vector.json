@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "stash",
+    "push"
+  ],
+  "env": {
+    "GIT_AUTHOR_NAME": "Lena Hart",
+    "GIT_AUTHOR_EMAIL": "lena@example.test",
+    "GIT_COMMITTER_NAME": "Lena Hart",
+    "GIT_COMMITTER_EMAIL": "lena@example.test",
+    "GIT_AUTHOR_DATE": "2024-12-13T03:04:05Z",
+    "GIT_COMMITTER_DATE": "2024-12-13T03:04:05Z",
+    "FAKETIME": "2024-12-13 03:04:05",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  },
+  "stdout": {
+    "pattern": "Saved working directory WIP on main: cb02d42 base\n"
+  }
+}

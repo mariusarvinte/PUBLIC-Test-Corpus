@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 """
 Test case generator for IMA ADPCM decoder library.
 Generates comprehensive tests for ima_decode function.

@@ -1,3 +1,6 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
 set(BLAKE_SOURCES
     src/blake256.c
     src/blake512.c

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "log",
+    "--oneline",
+    "--no-merges"
+  ],
+  "stdout": {
+    "pattern": "1905b75e3256d8b7de804aae9a88f635cedbfe38 side change\n57909377f80343bfd2b7c89b0128da88fec2cf1c main change\n68d1c35020ff2a3db68b84cd1cfa872ef13a23f6 base story\n"
+  }
+}

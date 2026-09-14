@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "blame"
+  ],
+  "rc": 129,
+  "stderr": {
+    "pattern": "git2: argument 'file' is required.\nusage: git2 blame [-p] [--line-porcelain] [--] <file>\n"
+  }
+}

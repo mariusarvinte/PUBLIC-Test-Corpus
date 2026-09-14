@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "status",
+    "-b",
+    "-s"
+  ],
+  "stdout": {
+    "pattern": "## main\nA  staged.txt\n M tracked.txt\n?? untracked.txt\n"
+  }
+}

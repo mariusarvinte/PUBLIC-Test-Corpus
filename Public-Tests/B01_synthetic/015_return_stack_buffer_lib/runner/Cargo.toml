@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_015_return_stack_buffer_lib_runner"
+name = "_015_return_stack_buffer_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "bad-command"
+  ],
+  "stderr": {
+    "pattern": "git2: 'bad-command' is not a git2 command. See 'git2 help'.\n"
+  },
+  "rc": 1
+}

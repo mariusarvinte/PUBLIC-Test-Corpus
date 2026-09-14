@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "checkout",
+    "missing"
+  ],
+  "env": {
+    "HOME": "/tmp/runtime/home"
+  },
+  "stderr": {
+    "pattern": "git2: revspec 'missing' not found\n"
+  },
+  "rc": 253
+}

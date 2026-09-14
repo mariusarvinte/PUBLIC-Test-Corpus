@@ -1,0 +1,16 @@
+{
+  "has_ub": "Applying zero offset to NULL pointer",
+  "lib_state_in": {
+    "w": 0,
+    "h": 0,
+    "bpp": 0,
+    "raw": []
+  },
+  "lib_state_out": {
+    "w": 0,
+    "h": 0,
+    "bpp": 0,
+    "raw": []
+  }
+}
+

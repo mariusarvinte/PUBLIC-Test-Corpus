@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_012_uninit_int_ptr_lib_runner"
+name = "_012_uninit_int_ptr_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

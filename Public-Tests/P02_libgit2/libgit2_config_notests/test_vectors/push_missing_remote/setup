@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+tar --no-same-owner -C "${DEFAULT_RUN_DIR}" -xzf "${TEST_RESOURCES}/repos.tar.gz"
+mv "${DEFAULT_RUN_DIR}/repo/.gitted" "${DEFAULT_RUN_DIR}/repo/.git"
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

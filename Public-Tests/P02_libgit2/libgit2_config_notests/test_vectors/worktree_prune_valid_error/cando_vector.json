@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "worktree",
+    "prune",
+    "wt"
+  ],
+  "stderr": {
+    "pattern": "git2: not pruning valid working tree\n"
+  },
+  "rc": 128
+}

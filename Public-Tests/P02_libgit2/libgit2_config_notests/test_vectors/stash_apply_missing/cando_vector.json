@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "stash",
+    "apply"
+  ],
+  "stderr": {
+    "pattern": "git2: reference 'refs/stash' not found\n"
+  },
+  "rc": 128
+}

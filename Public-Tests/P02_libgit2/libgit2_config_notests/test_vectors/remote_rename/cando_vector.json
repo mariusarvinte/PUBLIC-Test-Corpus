@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "remote",
+    "rename",
+    "origin",
+    "upstream"
+  ],
+  "stdout": {
+    "pattern": "Renamed remote 'origin' to 'upstream'\n"
+  }
+}

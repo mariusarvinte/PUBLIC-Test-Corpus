@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "clone",
+    "-c",
+    "core.logAllRefUpdates=false",
+    "-q",
+    "-b",
+    "side",
+    "/tmp/clone_branch_quiet_source",
+    "side_copy"
+  ],
+  "env": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "core.logAllRefUpdates",
+    "GIT_CONFIG_VALUE_0": "false",
+    "GIT_AUTHOR_NAME": "Talia West",
+    "GIT_AUTHOR_EMAIL": "talia@hearth.dev",
+    "GIT_COMMITTER_NAME": "Talia West",
+    "GIT_COMMITTER_EMAIL": "talia@hearth.dev",
+    "GIT_AUTHOR_DATE": "2024-09-10T11:12:13Z",
+    "GIT_COMMITTER_DATE": "2024-09-10T11:12:13Z",
+    "FAKETIME": "2024-09-10 14:15:16",
+    "FAKETIME_DONT_FAKE_MONOTONIC": "1",
+    "FAKETIME_DISABLE_SHM": "1"
+  }
+}

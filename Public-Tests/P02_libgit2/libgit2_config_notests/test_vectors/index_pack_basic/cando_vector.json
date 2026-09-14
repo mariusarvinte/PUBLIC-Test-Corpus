@@ -1,0 +1,6 @@
+{
+  "argv": [
+    "index-pack",
+    "sample.pack"
+  ]
+}

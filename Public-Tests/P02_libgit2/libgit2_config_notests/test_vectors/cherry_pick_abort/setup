@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+
+printf '%s\n' 'alpha' > "${DEFAULT_RUN_DIR}/repo/note.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add note.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Sage Wynn' \
+GIT_AUTHOR_EMAIL='sage.wynn@brook.info' \
+GIT_COMMITTER_NAME='Sage Wynn' \
+GIT_COMMITTER_EMAIL='sage.wynn@brook.info' \
+GIT_AUTHOR_DATE='2020-04-01T08:00:00Z' \
+GIT_COMMITTER_DATE='2020-04-01T08:00:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m base --no-gpg-sign >/dev/null 2>&1
+
+git -C "${DEFAULT_RUN_DIR}/repo" checkout -b topic >/dev/null 2>&1
+
+printf '%s\n' 'topic' > "${DEFAULT_RUN_DIR}/repo/note.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add note.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Cora Flint' \
+GIT_AUTHOR_EMAIL='cora.flint@ember.dev' \
+GIT_COMMITTER_NAME='Cora Flint' \
+GIT_COMMITTER_EMAIL='cora.flint@ember.dev' \
+GIT_AUTHOR_DATE='2022-04-02T09:15:00Z' \
+GIT_COMMITTER_DATE='2022-04-02T09:15:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m topic-change --no-gpg-sign >/dev/null 2>&1
+
+TOPIC_COMMIT=$(git -C "${DEFAULT_RUN_DIR}/repo" rev-parse HEAD)
+
+git -C "${DEFAULT_RUN_DIR}/repo" checkout main >/dev/null 2>&1
+
+printf '%s\n' 'main' > "${DEFAULT_RUN_DIR}/repo/note.txt"
+git -C "${DEFAULT_RUN_DIR}/repo" add note.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Dax Morrow' \
+GIT_AUTHOR_EMAIL='dax.morrow@quartz.io' \
+GIT_COMMITTER_NAME='Dax Morrow' \
+GIT_COMMITTER_EMAIL='dax.morrow@quartz.io' \
+GIT_AUTHOR_DATE='2025-04-03T10:30:00Z' \
+GIT_COMMITTER_DATE='2025-04-03T10:30:00Z' \
+	git -C "${DEFAULT_RUN_DIR}/repo" commit -m main-change --no-gpg-sign >/dev/null 2>&1
+
+git -C "${DEFAULT_RUN_DIR}/repo" cherry-pick "${TOPIC_COMMIT}" >/dev/null 2>&1 || true
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

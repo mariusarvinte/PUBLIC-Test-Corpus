@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo" "${DEFAULT_RUN_DIR}/home"
+mkdir -p "${DEFAULT_RUN_DIR}/home"
+git init -b main "${DEFAULT_RUN_DIR}/repo" >/dev/null 2>&1
+HOME="${DEFAULT_RUN_DIR}/home" git -C "${DEFAULT_RUN_DIR}/repo" config gc.auto 0
+HOME="${DEFAULT_RUN_DIR}/home" git -C "${DEFAULT_RUN_DIR}/repo" config maintenance.auto false
+HOME="${DEFAULT_RUN_DIR}/home" git -C "${DEFAULT_RUN_DIR}/repo" config --global user.name GlobalAda >/dev/null 2>&1
+HOME="${DEFAULT_RUN_DIR}/home" git -C "${DEFAULT_RUN_DIR}/repo" config --global core.editor vi >/dev/null 2>&1
+
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo" > "${WORKING_DIR_FILE}"

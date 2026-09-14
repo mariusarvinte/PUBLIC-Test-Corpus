@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "commit",
+    "--help"
+  ],
+  "stdout": {
+    "pattern": "usage: git2 commit [-m <msg>]\n\nRecord changes to the repository.\n\nOptions:\n    -m <msg>, --message=<msg>\n        message for commit\n"
+  }
+}

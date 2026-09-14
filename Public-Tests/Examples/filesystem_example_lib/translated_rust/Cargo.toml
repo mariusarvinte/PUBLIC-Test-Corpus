@@ -1,0 +1,16 @@
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+[package]
+name = "fileops"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "fileops"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+
+[workspace]

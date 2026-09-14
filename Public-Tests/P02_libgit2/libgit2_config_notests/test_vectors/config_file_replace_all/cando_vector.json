@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "config",
+    "--file",
+    "custom.cfg",
+    "--replace-all",
+    "demo.mode",
+    "vivid",
+    "auto"
+  ]
+}

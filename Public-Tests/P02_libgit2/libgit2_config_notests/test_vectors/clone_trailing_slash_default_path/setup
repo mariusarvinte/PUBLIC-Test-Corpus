@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf /tmp/clone_trailing_slash_source
+git init -b main /tmp/clone_trailing_slash_source >/dev/null 2>&1
+git -C /tmp/clone_trailing_slash_source config gc.auto 0
+git -C /tmp/clone_trailing_slash_source config maintenance.auto false
+
+printf '%s\n' 'trailing slash source' > /tmp/clone_trailing_slash_source/info.txt
+git -C /tmp/clone_trailing_slash_source add info.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Theo Frost' \
+GIT_AUTHOR_EMAIL='theo@frost.test' \
+GIT_COMMITTER_NAME='Theo Frost' \
+GIT_COMMITTER_EMAIL='theo@frost.test' \
+GIT_AUTHOR_DATE='2025-05-06T07:08:09Z' \
+GIT_COMMITTER_DATE='2025-05-06T07:08:09Z' \
+	git -C /tmp/clone_trailing_slash_source commit -m init --no-gpg-sign >/dev/null 2>&1

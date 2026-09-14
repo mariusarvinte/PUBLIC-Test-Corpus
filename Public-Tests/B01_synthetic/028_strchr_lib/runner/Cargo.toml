@@ -2,7 +2,7 @@
 # MIT License
 
 [package]
-name = "_028_strchr_lib_runner"
+name = "_028_strchr_cando_librunner"
 version = "0.1.0"
 edition = "2024"
 

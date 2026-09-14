@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf "${DEFAULT_RUN_DIR}/repo.git"
+git init --bare "${DEFAULT_RUN_DIR}/repo.git" >/dev/null 2>&1
+git -C "${DEFAULT_RUN_DIR}/repo.git" config gc.auto 0
+git -C "${DEFAULT_RUN_DIR}/repo.git" config maintenance.auto false
+printf '%s\n' "${DEFAULT_RUN_DIR}/repo.git" > "${WORKING_DIR_FILE}"

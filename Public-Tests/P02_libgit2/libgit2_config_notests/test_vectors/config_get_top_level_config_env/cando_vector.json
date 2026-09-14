@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "--config-env=core.editor=TEST_EDITOR",
+    "config",
+    "--get",
+    "core.editor"
+  ],
+  "env": {
+    "TEST_EDITOR": "nvim"
+  },
+  "stdout": {
+    "pattern": "nvim\n"
+  }
+}

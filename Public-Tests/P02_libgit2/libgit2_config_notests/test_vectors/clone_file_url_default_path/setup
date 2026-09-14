@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# © 2026 Massachusetts Institute of Technology
+# MIT License
+
+set -e
+
+rm -rf /tmp/clone_file_url_source.git
+git init -b main /tmp/clone_file_url_source.git >/dev/null 2>&1
+git -C /tmp/clone_file_url_source.git config gc.auto 0
+git -C /tmp/clone_file_url_source.git config maintenance.auto false
+
+printf '%s\n' 'file url source' > /tmp/clone_file_url_source.git/readme.txt
+git -C /tmp/clone_file_url_source.git add readme.txt >/dev/null 2>&1
+
+GIT_AUTHOR_NAME='Avery Pike' \
+GIT_AUTHOR_EMAIL='avery@delta.test' \
+GIT_COMMITTER_NAME='Avery Pike' \
+GIT_COMMITTER_EMAIL='avery@delta.test' \
+GIT_AUTHOR_DATE='2023-03-04T05:06:07Z' \
+GIT_COMMITTER_DATE='2023-03-04T05:06:07Z' \
+	git -C /tmp/clone_file_url_source.git commit -m init --no-gpg-sign >/dev/null 2>&1

@@ -7,3 +7,5 @@ members = [
 	"*-Tests/*/*_lib/runner",
 	"tools/cando*/"
 ]
+# Standalone so its own Cargo.lock (no test case names) is honored
+exclude = ["tools/cando2"]

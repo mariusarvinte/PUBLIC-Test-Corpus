@@ -5,6 +5,7 @@ result
 
 # We want to VC the flake.lock
 !flake.lock
+!/tools/cando2/Cargo.lock
 
 # Fuzzing outputs
 **/fuzz/artifacts/
